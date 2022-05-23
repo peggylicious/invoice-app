@@ -9,11 +9,24 @@
     --otherBg: #7C5DFA;
     --cardBorderRadius: 8px;
 
-    --white: fff;
+    --white: #fff;
     
     /* Text */
     --invoiceNoPrefix: #7E88C3;
     --whiteLight: #DFE3FA;
-    /* --btnPendingText: #FF8F00; */
-    /* --btnApprovedText: #33D69F; */
+
+    /* -------------------- */
+    /* ---- Spacing ------- */
+    --cardPadding: 24px 24px 28px 24px;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.invoice-card{
+    background-color: var(--bgPrimary)
 }

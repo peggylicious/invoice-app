@@ -1,0 +1,20 @@
+.invoice-card-content{
+    background-color: var(--bgPrimary);
+    border-radius: var(--cardBorderRadius);
+    padding: var(--cardPadding);
+}
+.invoice-title-initial{
+    color: var(--invoiceNoPrefix);
+}
+.invoice-no{
+    color: var(--white);
+}
+.invoice-date{
+    color: var(--whiteLight);
+}
+.invoice-vendor{
+    color: #fff;
+}
+.amount{
+    color: var(--white);
+}
