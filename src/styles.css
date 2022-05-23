@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --appBg: #141625;
+    --bgPrimary: #1E2139;
+    --btnPending: #FF8F00;
+    --btnApproved: #33D69F;
+    --btnDraft: #DFE3FA;
+    --themeSwitch: #858BB2;
+    --otherBg: #7C5DFA;
+    --cardBorderRadius: 8px;
+
+    --white: fff;
+    
+    /* Text */
+    --invoiceNoPrefix: #7E88C3;
+    --whiteLight: #DFE3FA;
+    /* --btnPendingText: #FF8F00; */
+    /* --btnApprovedText: #33D69F; */
+}
