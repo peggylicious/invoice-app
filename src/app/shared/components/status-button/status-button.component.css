@@ -1,0 +1,48 @@
+.status-btn {
+    border: none;
+    outline: none;
+    /* background: var(--btnPendingBg); */
+    /* opacity: 0.06; */
+    text-align: center;
+    width: 104px;
+    /* color: var(--btnPending); */
+    border-radius: var(--btnBorderRadius);
+    padding: 13px 12px 12px 18px;
+    /* color: var(--btnPending); */
+    font-weight: 700;
+    font-size: 12px;
+    /* line-height: 15px; */
+    /* identical to box height, or 125% */
+
+    letter-spacing: -0.25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-transform: capitalize;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--btnPending);
+    border-radius: 100%;
+    /* margin-right: 8px; */
+}
+.paid{
+    background: var(--btnPaidBg);
+    color: var(--btnPaid);
+}
+.paid .dot{
+    background: var(--btnPaid);
+    color: var(--btnPaid);
+}
+.pending{
+    background: var(--btnPendingBg);
+    color: var(--btnPending);
+
+}
+.pending .dot{
+    background: var(--btnPending);
+}

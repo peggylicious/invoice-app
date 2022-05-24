@@ -2,19 +2,40 @@
     background-color: var(--bgPrimary);
     border-radius: var(--cardBorderRadius);
     padding: var(--cardPadding);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.invoice-date, .invoice-title-initial, .invoice-vendor, .invoice-title-initial, .invoice-no{
+    font-size: 12px;
 }
 .invoice-title-initial{
     color: var(--invoiceNoPrefix);
 }
 .invoice-no{
     color: var(--white);
+    width: 50%;
+    order: 1;
+    margin-bottom: 24px;
 }
 .invoice-date{
     color: var(--whiteLight);
+    width: 50%;
+    order: 3;
 }
 .invoice-vendor{
     color: #fff;
+    width: 50%;
+    order: 2;
 }
 .amount{
     color: var(--white);
+    width: 50%;
+    font-size: 16px;
+    order: 5;
+    margin-top: -19px;
+}
+.invoice-btn-wrapper{
+    width: 50%;
+    order: 4;
 }

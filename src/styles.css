@@ -2,12 +2,13 @@
 :root{
     --appBg: #141625;
     --bgPrimary: #1E2139;
+    --btnPendingBg: rgba(255, 143, 0, 0.3);
     --btnPending: #FF8F00;
-    --btnApproved: #33D69F;
+    --btnPaidBg: rgba(51, 214, 159, 0.3);
+    --btnPaid: #33D69F;
     --btnDraft: #DFE3FA;
     --themeSwitch: #858BB2;
     --otherBg: #7C5DFA;
-    --cardBorderRadius: 8px;
 
     --white: #fff;
     
@@ -18,7 +19,8 @@
     /* -------------------- */
     /* ---- Spacing ------- */
     --cardPadding: 24px 24px 28px 24px;
-
+    --cardBorderRadius: 8px;
+    --btnBorderRadius: 6px;
 }
 
 *{

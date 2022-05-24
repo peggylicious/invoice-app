@@ -1,1 +1,1 @@
-<p>status-button works!</p>
+<button class="status-btn" [ngClass]="{'pending': status === 'pending', 'paid': status === 'paid'}"><span class="dot"></span>{{ status }}</button>

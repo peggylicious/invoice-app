@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StatusButtonComponent implements OnInit {
 
   constructor() { }
-
+  status = "pending";
   ngOnInit(): void {
   }
 
