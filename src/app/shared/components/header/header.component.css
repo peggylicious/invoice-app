@@ -1,0 +1,55 @@
+.header-wrapper{
+    height: 72px;
+    width: 100%;
+    background: var(--bgPrimary);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.app-logo-wrapper{
+    background: var(--otherBg);
+    height: 72px;
+    width: 72px;
+    position: relative;
+    margin-right: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.app-logo-arc{
+    background: var(--otherBgLight);
+    height: 36px;
+    width: 72px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    position: relative;
+    top: 36px;
+}
+.app-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.user-logo-container{
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 23px;
+    border-left: 1px solid var(--headerDivider);
+}
+.user-logo-wrapper{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+.user-logo-wrapper img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
