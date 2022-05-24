@@ -1,0 +1,63 @@
+.home-container{
+    background-color: var(--bgPrimary);
+    
+    
+}
+.page-title-wrapper{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 32px 0;
+}
+.total-invoice, .status-filter select, .add-btn{
+    font-size: 12px;
+}
+.page-title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.total-invoice{
+    color: var(--whiteLight)
+}
+.circle{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.circle svg{
+    /* margin: 8px auto 0 auto; */
+
+}
+.add-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    /* display: block; */
+    background: var(--otherBg);
+    padding: 8px 15px 8px 8px;
+    border-radius: 24px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+}
+.page-title{
+    margin-left: 0;
+    margin-right: auto;
+    color: var(--white);
+}
+.status-filter{
+    margin-right: 18px;
+}
+.status-filter select{
+    color: #fff;
+    background: transparent;
+    border: none;
+    font-weight: 700;
+}
