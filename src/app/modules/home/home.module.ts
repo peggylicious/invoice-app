@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
+import { InvoiceCardComponent } from 'src/app/components/invoice-card/invoice-card.component';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    // InvoiceCardComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule, 
+    InvoiceCardComponent
+  ],
+  // providers: [InvoiceCardComponent]
 })
 export class HomeModule { }

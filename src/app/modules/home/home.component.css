@@ -1,13 +1,9 @@
-.home-container{
-    /* background-color: var(--bgPrimary); */
-    
-    
-}
+
 .page-title-wrapper{
     display: flex;
     justify-content: right;
     align-items: center;
-    margin: 32px 0;
+    margin-bottom: 32px;
 }
 .total-invoice, .status-filter select, .add-btn{
     font-size: 12px;
@@ -29,10 +25,7 @@
     align-items: center;
     margin-right: 8px;
 }
-.circle svg{
-    /* margin: 8px auto 0 auto; */
 
-}
 .add-btn{
     display: flex;
     justify-content: center;
