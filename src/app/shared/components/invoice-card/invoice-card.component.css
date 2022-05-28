@@ -25,8 +25,8 @@
 }
 .invoice-vendor{
     color: #fff;
-    width: 50%;
-    order: 2;
+    width: 100%;
+    text-align: right;
 }
 .amount{
     color: var(--white);
@@ -38,4 +38,14 @@
 .invoice-btn-wrapper{
     width: 50%;
     order: 4;
+    text-align: right;
+    display: flex;
+    justify-content: right;
+}
+.vendor-wrapper{
+    order: 2;
+}
+.invoice-card-content > *{
+    /* flex-basis: 100%; */
+    width: 50%;
 }
