@@ -1,0 +1,122 @@
+.form-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--white);
+    margin-top: 24px;
+}
+
+.form-title .title-hash {
+    color: var(--titleHash);
+}
+
+.sender-wrapper,
+.receiver-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 24px; */
+}
+
+.quoted-item {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 16px; */
+}
+
+.app-input-wrapper {
+    width: 100%;
+}
+
+.app-input-wrapper.postcode,
+.app-input-wrapper.city {
+    width: calc(50% - 12px);
+}
+.app-input-wrapper.city {
+    margin-right: 24px;
+}
+.app-input-wrapper.price {
+    width: 30.58%;
+    margin-right: 16px;
+}
+
+.app-input-wrapper.qty {
+    width: 19.57%;
+    margin-right: 16px;
+}
+
+.app-input-wrapper.total {
+    width: 15.596%;
+    margin-right: 16px;
+}
+
+.app-input-wrapper.bin-bag {
+    width: 19.57%;
+}
+
+.app-input-wrapper.bin-bag .bin-wrapper {
+    padding-top: 17px;
+    text-align: right;
+}
+
+.total p {
+    padding-top: 17px;
+    color: var(--inputText);
+}
+
+.form-sub-title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: var(--otherBg);
+    /* margin-top: 0; */
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.app-input-wrapper {
+    margin-bottom: 24px;
+}
+
+.sender-input {
+    background: var(--bgPrimary);
+    font-weight: 700;
+    font-size: 12px;
+    padding: 17px 0 16px 20px;
+    letter-spacing: -0.25px;
+    border: 1px solid var(--inputBorder);
+    border-radius: 4px;
+    color: var(--white)
+}
+
+.app-input-wrapper label {
+    color: var(--inputText);
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.app-input-wrapper label,
+.app-input-wrapper .sender-input {
+    width: 100%;
+    letter-spacing: -0.25px;
+}
+
+.form-btn-wrapper {
+    width: 100%;
+}
+
+.form-btn-wrapper .add {
+    width: 100%;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    border: none;
+    border-radius: 24px;
+    background: var(--bgPrimary);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.25px;
+    color: var(--inputText);
+}

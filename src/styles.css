@@ -11,12 +11,15 @@
     --otherBg: #7C5DFA;
     --otherBgLight: #9277FF;
     --headerDivider: #494E6E;
+    --inputBorder: #252945;
 
     --white: #fff;
     
     /* Text */
     --invoiceNoPrefix: #7E88C3;
     --whiteLight: #DFE3FA;
+    --inputText: #888EB0;
+    --titleHash: #777F98;
 
     /* -------------------- */
     /* ---- Spacing ------- */
