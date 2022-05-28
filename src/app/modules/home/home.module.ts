@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { InvoiceCardComponent } from 'src/app/components/invoice-card/invoice-card.component';
 
+import { SharedModule } from 'src/app/shared/shared.module';
+import { InvoiceCardComponent } from 'src/app/shared/components/invoice-card/invoice-card.component';
+// import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 
 
 @NgModule({
@@ -12,7 +14,10 @@ import { InvoiceCardComponent } from 'src/app/components/invoice-card/invoice-ca
   ],
   imports: [
     CommonModule, 
-    InvoiceCardComponent
+    SharedModule,
+    // InvoiceCardComponent, 
+    // HeaderComponent,
+    
   ],
   // providers: [InvoiceCardComponent]
 })

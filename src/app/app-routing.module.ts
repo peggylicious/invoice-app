@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InvoiceCardComponent } from './components/invoice-card/invoice-card.component';
+import { InvoiceCardComponent } from './shared/components/invoice-card/invoice-card.component';
 import { HomeComponent } from './modules/home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 

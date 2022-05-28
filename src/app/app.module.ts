@@ -1,22 +1,27 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InvoiceCardComponent } from './components/invoice-card/invoice-card.component';
+import { HomeModule } from './modules/home/home.module';
+// import { InvoiceCardComponent } from './shared/components/invoice-card/invoice-card.component';
 import { SharedModule } from './shared/shared.module';
+import { TestComponent } from './components/test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InvoiceCardComponent
+    TestComponent,
+    // InvoiceCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    SharedModule
+    SharedModule, 
+    HomeModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
