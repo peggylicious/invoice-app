@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { InvoiceFormComponent } from './components/invoice-form/invoice-form.component';
 import { InvoiceCardComponent } from './components/invoice-card/invoice-card.component';
 import { FooterButtonComponent } from './components/footer-button/footer-button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { FooterButtonComponent } from './components/footer-button/footer-button.
     InvoiceFormComponent, 
     InvoiceCardComponent, 
     HeaderComponent, 
-    FooterButtonComponent
+    FooterButtonComponent, FooterComponent
   ],
   imports: [
     CommonModule
