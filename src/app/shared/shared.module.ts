@@ -12,7 +12,8 @@ import { FooterButtonComponent } from './components/footer-button/footer-button.
     StatusButtonComponent,
     InvoiceFormComponent, 
     InvoiceCardComponent, 
-    HeaderComponent, FooterButtonComponent
+    HeaderComponent, 
+    FooterButtonComponent
   ],
   imports: [
     CommonModule
@@ -20,7 +21,8 @@ import { FooterButtonComponent } from './components/footer-button/footer-button.
   exports: [
     StatusButtonComponent, 
     HeaderComponent, 
-    InvoiceCardComponent
+    InvoiceCardComponent, 
+    FooterButtonComponent
   ]
 })
 export class SharedModule { }

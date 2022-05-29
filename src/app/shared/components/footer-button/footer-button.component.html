@@ -1,1 +1,1 @@
-<p>footer-button works!</p>
+<button class="footer-button" [ngClass]="{'edit': buttonState === 'edit' || buttonState === 'cancel' || buttonState === 'discard', 'delete': buttonState === 'delete', 'save': buttonState === 'save', 'draft': buttonState === 'draft'}">{{ buttonTitle}}</button>
