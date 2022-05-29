@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { OthersComponent } from './others.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    OthersComponent
+  ],
   imports: [
     CommonModule
   ]
