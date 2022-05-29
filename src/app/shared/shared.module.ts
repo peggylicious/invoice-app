@@ -4,6 +4,7 @@ import { StatusButtonComponent } from './components/status-button/status-button.
 import { HeaderComponent } from './components/header/header.component';
 import { InvoiceFormComponent } from './components/invoice-form/invoice-form.component';
 import { InvoiceCardComponent } from './components/invoice-card/invoice-card.component';
+import { FooterButtonComponent } from './components/footer-button/footer-button.component';
 
 
 @NgModule({
@@ -11,7 +12,7 @@ import { InvoiceCardComponent } from './components/invoice-card/invoice-card.com
     StatusButtonComponent,
     InvoiceFormComponent, 
     InvoiceCardComponent, 
-    HeaderComponent
+    HeaderComponent, FooterButtonComponent
   ],
   imports: [
     CommonModule
