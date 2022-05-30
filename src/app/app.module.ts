@@ -7,6 +7,7 @@ import { HomeModule } from './modules/home/home.module';
 // import { InvoiceCardComponent } from './shared/components/invoice-card/invoice-card.component';
 import { SharedModule } from './shared/shared.module';
 import { TestComponent } from './components/test/test.component';
+import { OthersModule } from './modules/others/others.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TestComponent } from './components/test/test.component';
     BrowserModule,
     AppRoutingModule, 
     SharedModule, 
-    HomeModule
+    HomeModule, 
+    OthersModule
   ],
   providers: [],
   bootstrap: [AppComponent], 
