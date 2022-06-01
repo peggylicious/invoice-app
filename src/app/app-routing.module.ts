@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { InvoiceFormComponent } from './shared/components/invoice-form/invoice-form.component';
 import { FooterButtonComponent } from './shared/components/footer-button/footer-button.component';
 import { OthersComponent } from './modules/others/others.component';
+import { ModifyModule } from './modules/modify/modify.module';
 
 const routes: Routes = [
   {path: 'invoice-card', component: InvoiceCardComponent},

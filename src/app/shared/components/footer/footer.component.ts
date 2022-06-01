@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +8,23 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute, private route: Router) { }
+  items = [];
+  name:any;
+  isRouteLink:any;
   @Input() buttonTitle = "";
   @Input() buttonState = "";
   ngOnInit(): void {
+    this.isRouteLink = this.route.url;
+    console.log(this.isRouteLink)
+    console.log(this.route.url)
+    
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.name = params['name'];
+      console.log(params)
+    });
   }
-
+  getVal(){
+  //  return this.isRouteLink === 'modify/create' ? true
+  }
 }

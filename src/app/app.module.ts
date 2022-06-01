@@ -8,7 +8,7 @@ import { HomeModule } from './modules/home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { TestComponent } from './components/test/test.component';
 import { OthersModule } from './modules/others/others.module';
-
+import { ModifyModule } from './modules/modify/modify.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { OthersModule } from './modules/others/others.module';
     AppRoutingModule, 
     SharedModule, 
     HomeModule, 
-    OthersModule
+    OthersModule, 
+    ModifyModule
   ],
   providers: [],
   bootstrap: [AppComponent], 
