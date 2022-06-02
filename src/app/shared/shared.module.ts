@@ -24,7 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent, 
     InvoiceCardComponent, 
     FooterButtonComponent, 
-    FooterComponent
+    FooterComponent, 
+    InvoiceFormComponent
   ]
 })
 export class SharedModule { }
