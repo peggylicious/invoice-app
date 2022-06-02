@@ -9,7 +9,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
   buttonState = 'delete'
-  buttonTitle = 'delete'
+  buttonTitle = 'delete';
+  invoices = [1, 2, 3, 4, 5, 6];
   ngOnInit(): void {
   }
 

@@ -1,3 +1,6 @@
+.invoice-card-wrapper{
+    margin-bottom: 16px;
+}
 .invoice-card-content{
     background-color: var(--bgPrimary);
     border-radius: var(--cardBorderRadius);
