@@ -1,6 +1,7 @@
-.invoice-form-wrapper{
+.invoice-form-wrapper {
     margin-bottom: 88px;
 }
+
 .form-title {
     font-weight: 700;
     font-size: 24px;
@@ -26,6 +27,14 @@
     /* gap: 16px; */
 }
 
+.quote-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: -0.375px;
+    color: var(--titleHash)
+}
+
 .app-input-wrapper {
     width: 100%;
 }
@@ -34,9 +43,11 @@
 .app-input-wrapper.city {
     width: calc(50% - 12px);
 }
+
 .app-input-wrapper.city {
     margin-right: 24px;
 }
+
 .app-input-wrapper.price {
     width: 30.58%;
     margin-right: 16px;

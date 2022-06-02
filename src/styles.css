@@ -33,6 +33,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    font-family: 'League Spartan', sans-serif;
+}
 
 .invoice-card{
     background-color: var(--bgPrimary)
