@@ -9,6 +9,10 @@
 
 .status-title {
     color: var(--whiteLight);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
 }
 
 .invoice-recipient-details {
@@ -115,14 +119,17 @@ table {
     padding-bottom: 24px;
     /* border-spacing: 24px; */
 }
+
 .row-data td:last-child,
 th,
-tfoot td{
+tfoot td {
     color: var(--white);
 }
+
 .row-data td:last-child,
 th,
-tfoot td, .row-data td:first-child  {
+tfoot td,
+.row-data td:first-child {
     /* color: var(--white); */
     font-weight: 700;
     font-size: 12px;
@@ -130,7 +137,8 @@ tfoot td, .row-data td:first-child  {
     letter-spacing: -0.25px;
 
 }
-tfoot td{
+
+tfoot td {
     /* color: var(--white); */
     font-weight: 500;
     font-size: 11px;
