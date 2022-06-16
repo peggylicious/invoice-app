@@ -1,0 +1,142 @@
+.invoice-status-wrapper {
+    padding: 36px 24px 40px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+}
+
+.invoice-recipient-details {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 31px;
+    margin-bottom: 40px;
+}
+
+.invoice-payment-details,
+.bill-to {
+    width: 50%;
+    margin-bottom: 31px;
+}
+
+.invoice-payment-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 41px;
+}
+
+.invoice-status-wrapper,
+.invoice-details-wrapper {
+    border-radius: 8px;
+    background: var(--bgPrimary);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+}
+
+.invoice-details-wrapper {
+    padding: 24px;
+}
+
+.invoice-no {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.25px;
+    color: var(--whiteLight);
+}
+
+.invoice-no span {
+    color: var(--invoiceNoPrefix);
+}
+
+/* .section-title {
+    color: var(--whiteLight);
+    font-weight: 500;
+    font-size: 12px;
+} */
+
+.address {
+    color: var(--whiteLight);
+    letter-spacing: -0.229167px;
+    font-weight: 500;
+    font-size: 12px;
+    width: 93px;
+    /* margin-bottom: 31px; */
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height, or 125% */
+
+    letter-spacing: -0.25px;
+
+    color: var(--whiteLight);
+    margin-bottom: 12px;
+}
+
+.bold-title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.3125px;
+    color: var(--white);
+}
+
+.grouped-section {
+    display: flex;
+    width: 100%;
+}
+
+.invoice-table {
+    background: #252945;
+    border-radius: 8px 8px 0px 0px;
+}
+table{
+    width: 100%;
+    padding-top: 24px;
+    /* padding-bottom: 24px; */
+    /* border-spacing: 0 24px;*/
+    border-collapse: collapse; 
+}
+.row-data td{
+    padding-bottom: 24px;
+    /* border-spacing: 24px; */
+}
+.row-data td:last-child, th, tfoot td{
+    color: var(--white);
+}
+td:last-child{
+    text-align: right;
+}
+.row-data td:first-child{
+    color: var(--inputText);
+}
+th{
+    text-align: left;
+}
+th, td{
+    padding: 0 24px;
+    
+}
+tfoot td{
+    padding: 24px;
+    border-bottom-right-radius: 8px;
+}
+tfoot th{
+    border-bottom-left-radius: 8px;
+
+}
+tfoot{
+    background-color: #0C0E16;
+
+}
+.t-heading{
+    padding-bottom: 8px;
+}
+table tr:first-child th{
+    padding-top: 24px;
+}

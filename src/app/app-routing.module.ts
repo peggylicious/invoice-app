@@ -8,6 +8,7 @@ import { InvoiceFormComponent } from './shared/components/invoice-form/invoice-f
 import { FooterButtonComponent } from './shared/components/footer-button/footer-button.component';
 import { OthersComponent } from './modules/others/others.component';
 import { ModifyModule } from './modules/modify/modify.module';
+import { ViewInvoiceComponent } from './modules/home/components/view-invoice/view-invoice.component';
 
 const routes: Routes = [
   {path: 'invoice-card', component: InvoiceCardComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent}, 
   {path: 'form', component: InvoiceFormComponent}, 
   {path: 'button', component: FooterButtonComponent},
+  {path: 'view-invoice', component: ViewInvoiceComponent},
   {
     path: 'others',
     loadChildren: () => import('./modules/others/others.module').then(m => m.OthersModule)

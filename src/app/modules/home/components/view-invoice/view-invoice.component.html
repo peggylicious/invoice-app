@@ -1,1 +1,62 @@
-<p>view-invoice works!</p>
+<div class="invoice-view">
+  <div class="invoice-status-wrapper">
+    <p>Status</p>
+    <app-status-button></app-status-button>
+  </div>
+  <div class="invoice-details-wrapper">
+    <div class="invoice-title-header">
+      <h3 class="invoice-no"><span>#</span>XM9141</h3>
+      <h4 class="invoice-title section-title">Graphic design</h4>
+      <p class="address address-from">
+        19 Union Terrace London E1 3EZ United Kingdom
+      </p>
+    </div>
+    <div class="invoice-recipient-details">
+      <div class="grouped-section">
+        <div class="invoice-payment-details">
+          <div class="invoice-date">
+            <h4 class="section-title">Invoice Date</h4>
+            <p class="bold-title">21 Aug 2021</p>
+          </div>
+          <div class="payment-due">
+            <h4 class="section-title">Payment Due</h4>
+            <p class="bold-title">20 Sep 2021</p>
+          </div>
+        </div>
+        <div class="bill-to">
+          <h4 class="section-title">Bill To</h4>
+          <p class="invoice-title bold-title">Alex Grim</p>
+          <p class="address address-to">
+            84 Church Way Bradford BD1 9PB United Kingdom
+          </p>
+        </div>
+      </div>
+
+      <div class="destination-mail">
+        <h4 class="section-title">Sent to</h4>
+        <p class="bold-title">alexgrim@mail.com</p>
+      </div>
+    </div>
+    <div class="invoice-table">
+      <table>
+        <tr>
+          <th class="t-heading">Banner design</th>
+        </tr>
+        <tr class="row-data">
+          <td>$156 * 2</td>
+          <td>$212.00</td>
+        </tr>
+        <tr>
+          <th class="t-heading">Email design</th>
+        </tr>
+        <tr class="row-data">
+          <td>$200 * 4</td>
+          <td rowspan="2">$800.00</td>
+        </tr>
+        <tfoot>
+          <tr><th>Total</th><td>$1012</td></tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
