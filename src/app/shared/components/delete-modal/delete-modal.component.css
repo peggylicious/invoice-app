@@ -1,0 +1,42 @@
+
+.modal-halo{
+    padding: 32px;
+    background: rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.modal-wrapper {
+    background: var(--bgPrimary);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.modal-heading,
+.modal-message {}
+
+.modal-heading {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.416667px;
+}
+
+.modal-message {
+    color: var(--inputText);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: -0.25px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: right;
+    column-gap: 10px;
+}

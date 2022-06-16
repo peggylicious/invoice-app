@@ -1,1 +1,10 @@
-<p>delete-modal works!</p>
+<div class="modal-halo">
+    <div class="modal-wrapper">
+        <h1 class="modal-heading">Confirm Deletion</h1>
+        <p class="modal-message">Are you sure you want to delete invoice #XM9141? This action cannot be undone.</p>
+        <div class="modal-footer">
+            <app-footer-button [buttonState]="'edit'" [buttonTitle]="'cancel'"></app-footer-button>
+            <app-footer-button [buttonState]="'delete'" [buttonTitle]="'Delete'"></app-footer-button>
+        </div>
+    </div>
+</div>
