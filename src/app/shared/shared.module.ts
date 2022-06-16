@@ -26,7 +26,8 @@ import { DeleteModalComponent } from './components/delete-modal/delete-modal.com
     InvoiceCardComponent, 
     FooterButtonComponent, 
     FooterComponent, 
-    InvoiceFormComponent
+    InvoiceFormComponent, 
+    DeleteModalComponent
   ]
 })
 export class SharedModule { }
