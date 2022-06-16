@@ -1,1 +1,1 @@
-<button class="footer-button" [ngClass]="{'edit': buttonState === 'edit' || buttonState === 'cancel' || buttonState === 'discard', 'delete': buttonState === 'delete', 'save': buttonState === 'save', 'draft': buttonState === 'draft'}">{{ buttonTitle}}</button>
+<button class="footer-button" [ngClass]="{'edit': buttonState === 'edit' || buttonState === 'cancel' || buttonState === 'discard', 'delete': buttonState === 'delete', 'save': buttonState === 'save' || buttonState === 'paid', 'draft': buttonState === 'draft'}">{{ buttonTitle}}</button>
