@@ -37,6 +37,7 @@
 
 .invoice-details-wrapper {
     padding: 24px;
+    margin-bottom: 56px;
 }
 
 .invoice-no {
@@ -92,8 +93,8 @@
 }
 
 .invoice-table {
-    background: #252945;
-    border-radius: 8px 8px 0px 0px;
+    /* background: #252945;
+    border-radius: 8px 8px 0px 0px; */
 }
 table{
     width: 100%;
@@ -101,6 +102,8 @@ table{
     /* padding-bottom: 24px; */
     /* border-spacing: 0 24px;*/
     border-collapse: collapse; 
+    background: #252945;
+    border-radius: 8px 8px 0px 0px;
 }
 .row-data td{
     padding-bottom: 24px;
