@@ -24,10 +24,10 @@
       </button>
     </div>
   </div>
-  <div *ngIf="invoices.length < 1">
-    <app-invoice-card *ngFor="let invoice of invoices"></app-invoice-card>
-  </div>
   <div *ngIf="invoices.length > 1">
+    <app-invoice-card *ngFor="let invoice of invoices" [invoice]="invoice"></app-invoice-card>
+  </div>
+  <div *ngIf="invoices.length < 1">
     <div class="no-invoice-wrapper">
       <img src="../../../assets/images/illustration-empty.svg" alt="No invoice available">
       <h2>There is nothing here</h2>
