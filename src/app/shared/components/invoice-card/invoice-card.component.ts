@@ -10,14 +10,15 @@ export class InvoiceCardComponent implements OnInit {
   constructor() { }
   @Input() invoice: {} | undefined|any;
   paymentDue:any;
+  total:number = 0;
   ngOnInit(): void {
     this.changePaymentDue()
   }
   changePaymentDue(){
-    
-    this.paymentDue = new Date(this.invoice?.paymentDue)
-    console.log(this.paymentDue)
-    return this.paymentDue
+    this.total = parseFloat(this.invoice.total) // change total to number
+    this.paymentDue = new Date(this.invoice?.paymentDue) // get full date
+    // console.log(this.paymentDue)
+    // return this.paymentDue
   }
 
   // public get newDate(){

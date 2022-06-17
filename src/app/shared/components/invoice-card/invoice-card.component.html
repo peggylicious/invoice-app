@@ -9,7 +9,7 @@
     <div class="vendor-wrapper">
       <p class="invoice-vendor created-by"> {{ invoice.clientName }} </p>
     </div>
-    <h4 class="amount">£ {{ invoice.total }}</h4>
+    <h4 class="amount">{{ total | currency: 'GBP' }}</h4>
     <div class="invoice-btn-wrapper">
       <app-status-button [status]="invoice.status"></app-status-button>
 
