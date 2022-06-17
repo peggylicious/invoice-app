@@ -11,7 +11,7 @@
     </div>
     <h4 class="amount">£ {{ invoice.total }}</h4>
     <div class="invoice-btn-wrapper">
-      <app-status-button></app-status-button>
+      <app-status-button [status]="invoice.status"></app-status-button>
 
     </div>
   </div>

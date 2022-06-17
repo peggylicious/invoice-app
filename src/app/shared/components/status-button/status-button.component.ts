@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-status-button',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StatusButtonComponent implements OnInit {
 
   constructor() { }
-  status = "pending";
+  @Input() status: string|undefined;
   ngOnInit(): void {
   }
 

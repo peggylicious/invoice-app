@@ -46,3 +46,12 @@
 .pending .dot{
     background: var(--btnPending);
 }
+.draft{
+    background: var(--btnDraftBg);
+    color: var(--btnDraft);
+}
+
+.draft .dot{
+    background: var(--btnDraft);
+    color: var(--btnDraft);
+}
