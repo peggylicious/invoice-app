@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { InvoiceServiceService } from 'src/app/services/invoice-service.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private inv: InvoiceServiceService) { }
   buttonState = 'delete'
   buttonTitle = 'delete';
-  invoices = [1, 2, 3, 4, 5, 6];
+  invoices = [];
   ngOnInit(): void {
+    this.inv.getAllInvoice().subscribe({
+      next: (result:any)=>{
+        this.invoices = result
+        console.log(result)
+      }, 
+      error: (err)=>{
+        console.log(err)
+      }
+    })
   }
 
 }
