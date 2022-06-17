@@ -22,5 +22,7 @@ export class HomeComponent implements OnInit {
       }
     })
   }
-
+  sayHello(){
+    console.log("Hello!!!")
+  }
 }
