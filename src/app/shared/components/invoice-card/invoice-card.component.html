@@ -1,13 +1,15 @@
 <div class="invoice-card-wrapper">
   <div class="invoice-card-content">
     <p class="invoice-no">
-      <span class="invoice-title-initial">#</span><span>RT</span>3080
+      <span class="invoice-title-initial">#</span><span>{{ invoice?.id }}</span>
+      <!-- {{ invoice?.id }} -->
     </p>
-    <p class="invoice-date">Due  19 Aug 2021</p>
+    <p class="invoice-date"> {{ paymentDue | date: 'dd, MMM yyyy' }} </p>
+    <!-- <p class="invoice-date">Due  19 Aug 2021</p> -->
     <div class="vendor-wrapper">
-      <p class="invoice-vendor created-by">Jensen Huang</p>
+      <p class="invoice-vendor created-by"> {{ invoice.clientName }} </p>
     </div>
-    <h4 class="amount">£ 1,800.90</h4>
+    <h4 class="amount">£ {{ invoice.total }}</h4>
     <div class="invoice-btn-wrapper">
       <app-status-button></app-status-button>
 

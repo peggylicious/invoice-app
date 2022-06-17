@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-invoice-card',
@@ -8,8 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class InvoiceCardComponent implements OnInit {
 
   constructor() { }
-
+  @Input() invoice: {} | undefined|any;
+  paymentDue:any;
   ngOnInit(): void {
+    this.changePaymentDue()
   }
+  changePaymentDue(){
+    
+    this.paymentDue = new Date(this.invoice?.paymentDue)
+    console.log(this.paymentDue)
+    return this.paymentDue
+  }
+
+  // public get newDate(){
+  //   return new Date(this.invoice.paymentDue)
+  // }
 
 }
