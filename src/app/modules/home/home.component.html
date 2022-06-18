@@ -25,7 +25,7 @@
     </div>
   </div>
   <div *ngIf="invoices.length > 1">
-    <app-invoice-card *ngFor="let invoice of invoices" [invoice]="invoice" (click)="sayHello()"></app-invoice-card>
+    <app-invoice-card *ngFor="let invoice of invoices" [invoice]="invoice" (click)="openInvoice(invoice.id)"></app-invoice-card>
   </div>
   <div *ngIf="invoices.length < 1">
     <div class="no-invoice-wrapper">
