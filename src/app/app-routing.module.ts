@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent}, 
   {path: 'form', component: InvoiceFormComponent}, 
   {path: 'button', component: FooterButtonComponent},
-  {path: 'view-invoice', component: ViewInvoiceComponent},
+  {path: 'view-invoice/:id', component: ViewInvoiceComponent},
   {path: 'modal', component: DeleteModalComponent},
   {
     path: 'others',
