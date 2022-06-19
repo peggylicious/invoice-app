@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { InvoiceServiceService } from 'src/app/services/invoice-service.service';
+import { Invoice } from 'src/app/shared/interfaces/invoice';
 @Component({
   selector: 'app-view-invoice',
   templateUrl: './view-invoice.component.html',
@@ -7,9 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewInvoiceComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private route: ActivatedRoute, private invoiceservice: InvoiceServiceService) { }
+  id: string = "";
+  invoice:Invoice = {};
   ngOnInit(): void {
+    this.getInvoiceDetails()
   }
-
+  getInvoiceDetails(){
+    this.route.params.subscribe({
+      next: (param)=>{
+        this.id = param['id']
+        // console.log(this.id)
+        this.invoiceservice.getAllInvoice().subscribe({
+          next: (res)=>{
+            // console.log(res)
+            res.filter(item => {
+              if(item['id'] === this.id){
+                console.log(item)
+                this.invoice = item
+              }
+            })
+          }
+        })
+      }
+    })
+  }
 }
