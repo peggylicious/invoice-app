@@ -1,3 +1,4 @@
 export interface Invoice {
-    id: string
+    // id: string, 
+    [key: string]: any;
 }
