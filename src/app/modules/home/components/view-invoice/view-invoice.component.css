@@ -74,6 +74,9 @@
     width: 93px;
     /* margin-bottom: 31px; */
 }
+.address span{
+    display: block;
+}
 
 .section-title {
     font-weight: 500;

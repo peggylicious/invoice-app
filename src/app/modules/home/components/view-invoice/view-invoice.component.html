@@ -1,14 +1,17 @@
 <div class="invoice-view">
   <div class="invoice-status-wrapper">
     <p class="status-title">Status</p>
-    <app-status-button></app-status-button>
+    <app-status-button [status]="invoice['status']"></app-status-button>
   </div>
   <div class="invoice-details-wrapper">
     <div class="invoice-title-header">
-      <h3 class="invoice-no"><span>#</span>XM9141</h3>
+      <h3 class="invoice-no"><span>#</span>{{invoice['id']}}</h3>
       <h4 class="invoice-title section-title">Graphic design</h4>
       <p class="address address-from">
-        19 Union Terrace London E1 3EZ United Kingdom
+        <span>{{invoice['senderAddress']?.['street']}}</span>
+        <span>{{invoice['senderAddress']?.['city']}}</span>
+        <span>{{invoice['senderAddress']?.['postCode']}}</span>
+        <span>{{invoice['senderAddress']?.['country']}}</span>
       </p>
     </div>
     <div class="invoice-recipient-details">
@@ -16,45 +19,50 @@
         <div class="invoice-payment-details">
           <div class="invoice-date">
             <h4 class="section-title">Invoice Date</h4>
-            <p class="bold-title">21 Aug 2021</p>
+            <p class="bold-title">{{ invoice['createdAt'] | date: 'dd, MMM yyyy' }}</p>
           </div>
           <div class="payment-due">
             <h4 class="section-title">Payment Due</h4>
-            <p class="bold-title">20 Sep 2021</p>
+            <p class="bold-title">{{ invoice['paymentDue'] | date: 'dd, MMM yyyy' }}</p>
           </div>
         </div>
         <div class="bill-to">
           <h4 class="section-title">Bill To</h4>
           <p class="invoice-title bold-title">Alex Grim</p>
           <p class="address address-to">
-            84 Church Way Bradford BD1 9PB United Kingdom
+            <span>{{invoice['clientAddress']?.['street']}}</span>
+            <span>{{invoice['clientAddress']?.['city']}}</span>
+            <span>{{invoice['clientAddress']?.['postCode']}}</span>
+            <span>{{invoice['clientAddress']?.['country']}}</span>
           </p>
         </div>
       </div>
 
       <div class="destination-mail">
         <h4 class="section-title">Sent to</h4>
-        <p class="bold-title">alexgrim@mail.com</p>
+        <p class="bold-title">{{ invoice['clientEmail'] }}</p>
       </div>
     </div>
     <div class="invoice-table">
       <table>
-        <tr>
-          <th class="t-heading">Banner design</th>
-        </tr>
-        <tr class="row-data">
-          <td>$156 * 2</td>
-          <td>$212.00</td>
-        </tr>
-        <tr>
+        <tbody *ngFor="let item of invoice['items']">
+          <tr>
+            <th class="t-heading">{{ item.name}}</th>
+          </tr>
+          <tr class="row-data">
+            <td>{{ item.price * item.quantity | currency: 'GBP'}}</td>
+            <td>$212.00</td>
+          </tr>
+        </tbody>
+        <!-- <tr>
           <th class="t-heading">Email design</th>
         </tr>
         <tr class="row-data">
           <td>$200 * 4</td>
           <td rowspan="2">$800.00</td>
-        </tr>
+        </tr> -->
         <tfoot>
-          <tr><th>Total</th><td>$1012</td></tr>
+          <tr><th>Total</th><td>{{ invoice['total'] | currency: 'GBP' }}</td></tr>
         </tfoot>
       </table>
     </div>
