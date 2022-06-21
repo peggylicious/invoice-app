@@ -17,7 +17,7 @@
     --headerBg: #1E2139;
     --invoiceTableBody: #252945;
     --invoiceTableFooter: #0C0E16;
-    --white: #fff;
+    --primaryText: #fff;
     
     /* Text */
     --invoiceNoPrefix: #7E88C3;
@@ -50,7 +50,7 @@
     --headerBg: #373B53;
     --invoiceTableBody: #f9fafe;
     --invoiceTableFooter: #373B53;
-    --white: #0C0E16;
+    --primaryText: #0C0E16;
     
     /* Text */
     --invoiceNoPrefix: #7E88C3;

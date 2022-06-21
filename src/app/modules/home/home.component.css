@@ -19,7 +19,7 @@
     width: 32px;
     height: 32px;
     border-radius: 100%;
-    background-color: var(--white);
+    background-color: var(--primaryText);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,14 +36,14 @@
     background: var(--otherBg);
     padding: 8px 15px 8px 8px;
     border-radius: 24px;
-    color: var(--white);
+    color: var(--primaryText);
     font-size: 12px;
     font-weight: 700;
 }
 .page-title{
     margin-left: 0;
     margin-right: auto;
-    color: var(--white);
+    color: var(--primaryText);
 }
 .status-filter{
     margin-right: 18px;

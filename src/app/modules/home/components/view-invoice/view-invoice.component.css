@@ -95,7 +95,7 @@
     font-size: 15px;
     line-height: 20px;
     letter-spacing: -0.3125px;
-    color: var(--white);
+    color: var(--primaryText);
 }
 
 .grouped-section {
@@ -126,14 +126,14 @@ table {
 .row-data td:last-child,
 th,
 tfoot td {
-    color: var(--white);
+    color: var(--primaryText);
 }
 
 .row-data td:last-child,
 th,
 tfoot td,
 .row-data td:first-child {
-    /* color: var(--white); */
+    /* color: var(--primaryText); */
     font-weight: 700;
     font-size: 12px;
     line-height: 15px;
@@ -142,7 +142,7 @@ tfoot td,
 }
 
 tfoot td {
-    /* color: var(--white); */
+    /* color: var(--primaryText); */
     font-weight: 500;
     font-size: 11px;
     line-height: 18px;

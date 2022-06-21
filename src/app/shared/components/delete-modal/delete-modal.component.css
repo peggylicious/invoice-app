@@ -19,7 +19,7 @@
 .modal-message {}
 
 .modal-heading {
-    color: var(--white);
+    color: var(--primaryText);
     font-weight: 700;
     font-size: 20px;
     line-height: 32px;
