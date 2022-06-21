@@ -14,6 +14,7 @@
     --headerDivider: #494E6E;
     --inputBorder: #252945;
     --editButton: #252945;
+    --headerBg: #1E2139;
     --white: #fff;
     
     /* Text */
@@ -30,7 +31,7 @@
 }
 
 .light-root{
-    --appBg: #141625;
+    --appBg: #F8F8FB;
     --bgPrimary: #fff;
     --btnPendingBg: rgba(255, 143, 0, 0.3);
     --btnPending: #FF8F00;
@@ -44,11 +45,12 @@
     --headerDivider: #494E6E;
     --inputBorder: #252945;
     --editButton: #252945;
-    --white: #fff;
+    --headerBg: #373B53;
+    --white: #0C0E16;
     
     /* Text */
     --invoiceNoPrefix: #7E88C3;
-    --whiteLight: #DFE3FA;
+    --whiteLight: #888EB0;
     --inputText: #888EB0;
     --titleHash: #777F98;
 
