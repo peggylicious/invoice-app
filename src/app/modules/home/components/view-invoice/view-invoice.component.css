@@ -103,10 +103,6 @@
     width: 100%;
 }
 
-.invoice-table {
-    /* background: #252945;
-    border-radius: 8px 8px 0px 0px; */
-}
 
 table {
     width: 100%;
@@ -181,7 +177,9 @@ tfoot {
     background-color: var(--invoiceTableFooter);
 
 }
-
+tfoot td, tfoot th{
+    color: var(--white);
+}
 .t-heading {
     padding-bottom: 8px;
 }
