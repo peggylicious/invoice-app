@@ -10,8 +10,9 @@ export class HeaderComponent implements OnInit {
   constructor() { }
   theme = 'dark'
   ngOnInit(): void {
+    this.switchTheme(localStorage.getItem('theme'))
   }
-  switchTheme(state: string){
+  switchTheme(state: string|null){
     if(state === 'dark'){
       document.querySelectorAll('.theme')[0].classList.add('dark-root');
       document.querySelectorAll('.theme')[0].classList.remove('light-root');
