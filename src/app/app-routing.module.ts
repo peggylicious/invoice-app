@@ -12,6 +12,7 @@ import { ViewInvoiceComponent } from './modules/home/components/view-invoice/vie
 import { DeleteModalComponent } from './shared/components/delete-modal/delete-modal.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/home',  pathMatch: 'full'},
   {path: 'invoice-card', component: InvoiceCardComponent},
   {path: 'header', component: HeaderComponent}, 
   {path: 'home', component: HomeComponent}, 
