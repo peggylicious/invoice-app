@@ -12,10 +12,12 @@ export class FooterComponent implements OnInit {
   items = [];
   name:any;
   isRouteLink:any;
+  isViewInvoiceRouteLink:boolean = false;
   @Input() buttonTitle = "";
   @Input() buttonState = "";
   ngOnInit(): void {
     this.isRouteLink = this.route.url;
+    this.isViewInvoiceRouteLink = this.isRouteLink.includes('view-invoice')
     console.log(this.isRouteLink)
     console.log(this.route.url)
     
