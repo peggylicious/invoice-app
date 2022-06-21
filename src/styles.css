@@ -80,3 +80,6 @@ html{
 .invoice-card{
     background-color: var(--bgPrimary)
 }
+body{
+    background: var(--appBg);
+}
