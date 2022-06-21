@@ -1,7 +1,7 @@
 .header-wrapper{
     height: 72px;
     width: 100%;
-    background: var(--bgPrimary);
+    background: var(--headerBg);
     display: flex;
     align-items: center;
     justify-content: right;
