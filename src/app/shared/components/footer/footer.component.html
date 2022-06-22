@@ -11,9 +11,9 @@
 
 </div>
 <div class="footer-wrapper" *ngIf="isViewInvoiceRouteLink">
-    <app-footer-button [buttonTitle]="'edit'" [buttonState]="'edit'"></app-footer-button>
+    <app-footer-button [buttonTitle]="'edit'" [buttonState]="'edit'" [invoiceId]="invoiceId"></app-footer-button>
 
-    <app-footer-button [buttonTitle]="'delete'" [buttonState]="'delete'" ></app-footer-button>
+    <app-footer-button [buttonTitle]="'delete'" [buttonState]="'delete'" [invoiceId]="invoiceId"></app-footer-button>
     <app-footer-button [buttonTitle]="'Mark as Paid'" [buttonState]="'paid'"></app-footer-button>
 
 </div>
