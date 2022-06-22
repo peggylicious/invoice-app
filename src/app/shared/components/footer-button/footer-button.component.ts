@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-footer-button',
@@ -7,12 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FooterButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router, private activatedRoute: ActivatedRoute) { }
   @Input() buttonTitle = "";
   @Input() buttonState = "";
-
+  @Input() invoiceId = '';
   
   ngOnInit(): void {
   }
-
+  openInvoiceForm(x:any){
+    if(x === 'edit'){
+      this.route.navigateByUrl(`/modify/edit/${this.invoiceId}`, {state: {formType: 'edit', invoiceId: ''}})
+    }
+    console.log(x)
+  }
 }
