@@ -7,6 +7,7 @@ import { InvoiceCardComponent } from './components/invoice-card/invoice-card.com
 import { FooterButtonComponent } from './components/footer-button/footer-button.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { DeleteModalComponent } from './components/delete-modal/delete-modal.com
     FooterButtonComponent, FooterComponent, DeleteModalComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, ReactiveFormsModule
   ],
   exports: [
     StatusButtonComponent, 
