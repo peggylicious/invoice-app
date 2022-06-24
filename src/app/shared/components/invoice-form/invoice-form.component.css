@@ -21,7 +21,7 @@
     /* gap: 24px; */
 }
 
-.quoted-item {
+.item-container {
     display: flex;
     flex-wrap: wrap;
     /* gap: 16px; */
