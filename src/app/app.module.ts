@@ -11,10 +11,13 @@ import { SharedModule } from './shared/shared.module';
 import { TestComponent } from './components/test/test.component';
 import { OthersModule } from './modules/others/others.module';
 import { ModifyModule } from './modules/modify/modify.module';
+import { DefaultModule } from './modules/default/default.module';
+import { DefaultComponent } from './modules/default/default.component';
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
+    // DefaultComponent
     // InvoiceCardComponent
   ],
   imports: [
@@ -25,7 +28,8 @@ import { ModifyModule } from './modules/modify/modify.module';
     OthersModule, 
     ModifyModule, 
     HttpClientModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DefaultModule
   ],
   providers: [],
   bootstrap: [AppComponent], 
