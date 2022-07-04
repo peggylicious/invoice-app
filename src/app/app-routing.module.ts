@@ -25,6 +25,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/others/others.module').then(m => m.OthersModule)
   },
   { path: 'modify', loadChildren: () => import('./modules/modify/modify.module').then(m => m.ModifyModule) },
+  { path: 'default', loadChildren: () => import('./modules/default/default.module').then(m => m.DefaultModule) },
 
 
 
