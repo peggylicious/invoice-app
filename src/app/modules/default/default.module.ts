@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DefaultComponent } from './default.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DefaultRoutingModule } from './default-routing.module';
+import { HomeModule } from '../home/home.module';
+import { ModifyModule } from '../modify/modify.module';
 
 
 
@@ -13,7 +15,9 @@ import { DefaultRoutingModule } from './default-routing.module';
   imports: [
     CommonModule, 
     SharedModule, 
-    DefaultRoutingModule
+    HomeModule,
+    DefaultRoutingModule, 
+    ModifyModule
   ]
 })
 export class DefaultModule { }
