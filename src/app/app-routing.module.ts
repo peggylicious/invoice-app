@@ -24,7 +24,7 @@ const routes: Routes = [
     path: 'others',
     loadChildren: () => import('./modules/others/others.module').then(m => m.OthersModule)
   },
-  { path: 'modify', loadChildren: () => import('./modules/modify/modify.module').then(m => m.ModifyModule) }, //Not named so that children routes appear  as desired e.g localhost:4321/home instead of localhost:4321/default/home
+  // { path: 'modify', loadChildren: () => import('./modules/modify/modify.module').then(m => m.ModifyModule) }, //Not named so that children routes appear  as desired e.g localhost:4321/home instead of localhost:4321/default/home
   { path: '', loadChildren: () => import('./modules/default/default.module').then(m => m.DefaultModule) },
 
 
