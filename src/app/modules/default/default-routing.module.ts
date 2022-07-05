@@ -11,6 +11,8 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'view-invoice/:id', component: ViewInvoiceComponent },
+  { path: 'modify', loadChildren: () => import('../modify/modify.module').then(m => m.ModifyModule) }, //Not named so that children routes appear  as desired e.g localhost:4321/home instead of localhost:4321/default/home
+
     ],
   },
 ];
