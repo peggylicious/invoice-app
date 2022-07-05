@@ -15,17 +15,17 @@ const routes: Routes = [
   {path: '', redirectTo: '/home',  pathMatch: 'full'},
   {path: 'invoice-card', component: InvoiceCardComponent},
   {path: 'header', component: HeaderComponent}, 
-  {path: 'home', component: HomeComponent}, 
+  // {path: 'home', component: HomeComponent}, 
   {path: 'form', component: InvoiceFormComponent}, 
   {path: 'button', component: FooterButtonComponent},
-  {path: 'view-invoice/:id', component: ViewInvoiceComponent},
+  // {path: 'view-invoice/:id', component: ViewInvoiceComponent},
   {path: 'modal', component: DeleteModalComponent},
   {
     path: 'others',
     loadChildren: () => import('./modules/others/others.module').then(m => m.OthersModule)
   },
-  { path: 'modify', loadChildren: () => import('./modules/modify/modify.module').then(m => m.ModifyModule) },
-  { path: 'default', loadChildren: () => import('./modules/default/default.module').then(m => m.DefaultModule) },
+  { path: 'modify', loadChildren: () => import('./modules/modify/modify.module').then(m => m.ModifyModule) }, //Not named so that children routes appear  as desired e.g localhost:4321/home instead of localhost:4321/default/home
+  { path: '', loadChildren: () => import('./modules/default/default.module').then(m => m.DefaultModule) },
 
 
 
