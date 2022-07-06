@@ -11,6 +11,6 @@ export class AuthService {
     return this.http.post('https://invoice-api-0.herokuapp.com/user/signup', data)
   }
   loginUser(data:any){
-    return this.http.post('http://localhost:3000/user/login', data)
+    return this.http.post('https://invoice-api-0.herokuapp.com/user/login', data)
   }
 }
