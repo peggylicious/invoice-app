@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div class="invoice-form-wrapper">
+    <h1 class="form-title">Edit </h1>
+  <form action="" class="invoice-form" [formGroup]="registerForm" (ngSubmit)="login()">
+    <div class="sender-wrapper">
+        <h4 class="form-sub-title">Bill From</h4>
+      <div class="app-input-wrapper">
+        <label for="sender-address">Email</label>
+        <input type="email" class="sender-input" name="" id="sender-address" formControlName="email" />
+      </div>
+      <div class="app-input-wrapper city" >
+        <label for="">Password</label>
+        <input type="password" class="sender-input" name="" id="" formControlName="password" />
+      </div>
+    </div>
+    <button [disabled]="!registerForm.valid">Login</button>
+  </form>
+</div>
