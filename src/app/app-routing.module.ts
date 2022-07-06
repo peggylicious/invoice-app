@@ -10,6 +10,8 @@ import { OthersComponent } from './modules/others/others.component';
 import { ModifyModule } from './modules/modify/modify.module';
 import { ViewInvoiceComponent } from './modules/home/components/view-invoice/view-invoice.component';
 import { DeleteModalComponent } from './shared/components/delete-modal/delete-modal.component';
+import { RegisterComponent } from './modules/auth/register/register.component';
+import { LoginComponent } from './modules/auth/login/login.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home',  pathMatch: 'full'},
@@ -26,6 +28,8 @@ const routes: Routes = [
   },
   // { path: 'modify', loadChildren: () => import('./modules/modify/modify.module').then(m => m.ModifyModule) }, //Not named so that children routes appear  as desired e.g localhost:4321/home instead of localhost:4321/default/home
   { path: '', loadChildren: () => import('./modules/default/default.module').then(m => m.DefaultModule) },
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent}
 
 
 
