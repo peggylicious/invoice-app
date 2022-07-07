@@ -12,6 +12,7 @@ import { ViewInvoiceComponent } from './modules/home/components/view-invoice/vie
 import { DeleteModalComponent } from './shared/components/delete-modal/delete-modal.component';
 import { RegisterComponent } from './modules/auth/components/register/register.component';
 import { LoginComponent } from './modules/auth/components/login/login.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home',  pathMatch: 'full'},
@@ -29,8 +30,8 @@ const routes: Routes = [
   // { path: 'modify', loadChildren: () => import('./modules/modify/modify.module').then(m => m.ModifyModule) }, //Not named so that children routes appear  as desired e.g localhost:4321/home instead of localhost:4321/default/home
   { path: '', loadChildren: () => import('./modules/default/default.module').then(m => m.DefaultModule) },
   {path: 'register', component: RegisterComponent},
-  {path: 'login', component: LoginComponent}
-
+  {path: 'login', component: LoginComponent},
+  {path: '**', component: PageNotFoundComponent}
 
 
 
