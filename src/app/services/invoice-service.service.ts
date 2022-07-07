@@ -8,7 +8,10 @@ export class InvoiceServiceService {
 
   constructor(private http: HttpClient) { }
   getAllInvoice(){
-    return this.http.get<Invoice[]>('assets/data.json')
-  
+    return this.http.get<Invoice[]>('https://invoice-api-0.herokuapp.com/invoice/all')
+  }
+  addInvoice(data:any){
+    // data = new FormData(data)
+    return this.http.post<Invoice[]>('assets/data.json', data) 
   }
 }
