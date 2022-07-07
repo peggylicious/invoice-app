@@ -23,7 +23,7 @@ export class AppComponent {
       // document.querySelectorAll('.theme')[0].classList.remove('dark-root');
       // localStorage.setItem('theme', 'light')
     }else{
-      document.querySelectorAll('.theme')[0].classList.add(' ');
+      document.querySelectorAll('.theme')[0].classList.add('dark');
     }
   }
 }
