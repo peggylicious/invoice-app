@@ -10,7 +10,7 @@ import { OthersComponent } from './modules/others/others.component';
 import { ModifyModule } from './modules/modify/modify.module';
 import { ViewInvoiceComponent } from './modules/home/components/view-invoice/view-invoice.component';
 import { DeleteModalComponent } from './shared/components/delete-modal/delete-modal.component';
-import { RegisterComponent } from './modules/auth/register/register.component';
+import { RegisterComponent } from './modules/auth/components/register/register.component';
 import { LoginComponent } from './modules/auth/components/login/login.component';
 
 const routes: Routes = [
