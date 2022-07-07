@@ -19,9 +19,9 @@ export class InvoiceFormComponent implements OnInit {
       postCode: [''],
     }),
     id: [''],
-    clientEmail: ['test@client.com'],
-    clientName: [''],
-    createdAt: [''],
+    client_email: ['test@client.com'],
+    client_name: [''],
+    created_at: [''],
     description: [''],
     items: this.fb.array([
       // this.fb.group({
@@ -31,8 +31,8 @@ export class InvoiceFormComponent implements OnInit {
       //   total: ['']
       // })
     ]),
-    paymentDue: [''],
-    paymentTerms: [''],
+    payment_due: [''],
+    payment_terms: [''],
     senderAddress: this.fb.group({
       city: [''],
       street: ['romanias'],
@@ -58,7 +58,7 @@ export class InvoiceFormComponent implements OnInit {
       next: (res) => {
         // console.log(res)
         res.filter((item) => {
-          if (item['id'] === this.invoiceId) {
+          if (item['invoice_id'] === this.invoiceId) {
             console.log(item);
             this.invoice = item;
             this.initializeForm(this.invoice);
@@ -68,7 +68,7 @@ export class InvoiceFormComponent implements OnInit {
     });
   }
   initializeForm(selectedInvoice: Invoice) {
-    console.log('hI', selectedInvoice['items']);
+    console.log('hI', selectedInvoice);
     this.createItem()
 
     this.invoiceDetails.patchValue({
@@ -79,13 +79,13 @@ export class InvoiceFormComponent implements OnInit {
         postCode: selectedInvoice?.['clientAddress']?.postCode,
       },
       id: '',
-      clientEmail: selectedInvoice?.['clientEmail'],
-      clientName: selectedInvoice?.['clientName'],
-      createdAt: selectedInvoice?.['createdAt'],
+      client_email: selectedInvoice?.['client_email'],
+      client_name: selectedInvoice?.['client_name'],
+      created_at: selectedInvoice?.['created_at'],
       description: '',
       items: selectedInvoice['items'],
-      paymentDue: selectedInvoice?.['paymentDue'],
-      paymentTerms: '',
+      payment_due: selectedInvoice?.['payment_due'],
+      payment_terms: '',
       senderAddress: {
         city: selectedInvoice?.['senderAddress']?.city,
         street: selectedInvoice?.['senderAddress']?.street,
