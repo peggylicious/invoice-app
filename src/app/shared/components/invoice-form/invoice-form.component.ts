@@ -42,6 +42,8 @@ export class InvoiceFormComponent implements OnInit {
     status: [''],
     total: [''],
   });
+  @Input() pageTitle:any = ""
+
   constructor(
     private route: Router,
     private activatedRoute: ActivatedRoute,

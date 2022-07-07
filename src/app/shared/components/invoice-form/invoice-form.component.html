@@ -1,5 +1,5 @@
 <div class="invoice-form-wrapper">
-    <h1 class="form-title">Edit <span class="title-hash">#</span>{{ invoiceId }} </h1>
+    <h1 class="form-title">{{ pageTitle | titlecase }} <span class="title-hash" *ngIf="pageTitle === 'edit'">#</span>{{ invoiceId }} </h1>
   <form action="" class="invoice-form" [formGroup]="invoiceDetails">
     <div class="sender-wrapper">
         <h4 class="form-sub-title">Bill From</h4>
