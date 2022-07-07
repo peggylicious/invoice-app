@@ -15,6 +15,7 @@ import { DefaultModule } from './modules/default/default.module';
 import { DefaultComponent } from './modules/default/default.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { AuthGuard } from './modules/auth/guard/auth.guard';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 export function tokenGetter() {
   console.log("Abbbbbb")
@@ -24,6 +25,7 @@ export function tokenGetter() {
   declarations: [
     AppComponent,
     TestComponent,
+    PageNotFoundComponent,
     // DefaultComponent
     // InvoiceCardComponent
   ],
