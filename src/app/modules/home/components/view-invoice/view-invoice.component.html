@@ -5,7 +5,7 @@
   </div>
   <div class="invoice-details-wrapper">
     <div class="invoice-title-header">
-      <h3 class="invoice-no"><span>#</span>{{invoice['id']}}</h3>
+      <h3 class="invoice-no"><span>#</span>{{invoice['invoice_id']}}</h3>
       <h4 class="invoice-title section-title">Graphic design</h4>
       <p class="address address-from">
         <span>{{invoice['senderAddress']?.['street']}}</span>
@@ -19,11 +19,11 @@
         <div class="invoice-payment-details">
           <div class="invoice-date">
             <h4 class="section-title">Invoice Date</h4>
-            <p class="bold-title">{{ invoice['createdAt'] | date: 'dd, MMM yyyy' }}</p>
+            <p class="bold-title">{{ invoice['created_at'] | date: 'dd, MMM yyyy' }}</p>
           </div>
           <div class="payment-due">
             <h4 class="section-title">Payment Due</h4>
-            <p class="bold-title">{{ invoice['paymentDue'] | date: 'dd, MMM yyyy' }}</p>
+            <p class="bold-title">{{ invoice['payment_due'] | date: 'dd, MMM yyyy' }}</p>
           </div>
         </div>
         <div class="bill-to">
@@ -40,7 +40,7 @@
 
       <div class="destination-mail">
         <h4 class="section-title">Sent to</h4>
-        <p class="bold-title">{{ invoice['clientEmail'] }}</p>
+        <p class="bold-title">{{ invoice['client_email'] }}</p>
       </div>
     </div>
     <div class="invoice-table">

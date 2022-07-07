@@ -24,7 +24,7 @@ export class ViewInvoiceComponent implements OnInit {
           next: (res)=>{
             // console.log(res)
             res.filter(item => {
-              if(item['id'] === this.id){
+              if(item['invoice_id'] === this.id){
                 console.log(item)
                 this.invoice = item
               }
