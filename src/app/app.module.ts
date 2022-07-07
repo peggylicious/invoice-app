@@ -14,6 +14,7 @@ import { ModifyModule } from './modules/modify/modify.module';
 import { DefaultModule } from './modules/default/default.module';
 import { DefaultComponent } from './modules/default/default.component';
 import { AuthModule } from './modules/auth/auth.module';
+import { AuthGuard } from './modules/auth/guard/auth.guard';
 
 export function tokenGetter() {
   console.log("Abbbbbb")
@@ -49,7 +50,7 @@ export function tokenGetter() {
       },
     })
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
