@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { JwtModule } from "@auth0/angular-jwt";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './modules/home/home.module';
@@ -15,6 +15,10 @@ import { DefaultModule } from './modules/default/default.module';
 import { DefaultComponent } from './modules/default/default.component';
 import { AuthModule } from './modules/auth/auth.module';
 
+export function tokenGetter() {
+  console.log("Abbbbbb")
+  return localStorage.getItem("access_token");
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +37,17 @@ import { AuthModule } from './modules/auth/auth.module';
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
-    DefaultModule
+    DefaultModule, 
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: function () {
+          console.log("Abbbbbb")
+          return localStorage.getItem("access_token");
+        },
+        allowedDomains: ["invoice-api-0.herokuapp.com", "localhost:4315", "localhost:3000"],
+        disallowedRoutes: ["http://example.com/examplebadroute/"],
+      },
+    })
   ],
   providers: [],
   bootstrap: [AppComponent], 
