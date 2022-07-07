@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private fb: FormBuilder, private auth: AuthService) {}
+  constructor(private fb: FormBuilder, private auth: AuthService, private route: Router) {}
   registerForm = this.fb.group({
     email: [''],
     password: [''],
@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
       next: (result:any) => {
         console.log(result);
         localStorage.setItem('access_token', result.token)
+        this.route.navigateByUrl('/home')
       },
       error: (err) => {
         console.log(err);
