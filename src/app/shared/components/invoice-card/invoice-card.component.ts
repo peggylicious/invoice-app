@@ -16,7 +16,7 @@ export class InvoiceCardComponent implements OnInit {
   }
   changePaymentDue(){
     this.total = parseFloat(this.invoice.total) // change total to number
-    this.paymentDue = new Date(this.invoice?.paymentDue) // get full date
+    this.paymentDue = new Date(this.invoice?.payment_due) // get full date
     // console.log(this.paymentDue)
     // return this.paymentDue
   }
