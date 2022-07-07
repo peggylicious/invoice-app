@@ -22,8 +22,9 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this.auth.loginUser(this.registerForm.value).subscribe({
-      next: (result) => {
+      next: (result:any) => {
         console.log(result);
+        localStorage.setItem('access_token', result.token)
       },
       error: (err) => {
         console.log(err);
