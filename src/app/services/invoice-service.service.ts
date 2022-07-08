@@ -5,13 +5,14 @@ import { Invoice } from '../shared/interfaces/invoice';
   providedIn: 'root'
 })
 export class InvoiceServiceService {
-
+  invoiceUrl = "https://invoice-api-0.herokuapp.com/invoice/"
   constructor(private http: HttpClient) { }
   getAllInvoice(){
-    return this.http.get<Invoice[]>('https://invoice-api-0.herokuapp.com/invoice/all')
+    return this.http.get<Invoice[]>(`${this.invoiceUrl}all`)
   }
   addInvoice(data:any){
     // data = new FormData(data)
-    return this.http.post<Invoice[]>('assets/data.json', data) 
+    console.log(data)
+    return this.http.post<Invoice[]>(`${this.invoiceUrl}create`, data) 
   }
 }
