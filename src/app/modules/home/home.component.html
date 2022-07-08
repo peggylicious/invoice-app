@@ -10,7 +10,7 @@
       </select>
     </div>
     <div class="add-invoice-btn">
-      <button class="add-btn">
+      <a href="" [routerLink]="[ '/modify/create' ]" class="add-btn">
         <span class="circle">
           <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -21,7 +21,7 @@
           </svg>
         </span>
         New
-      </button>
+      </a>
     </div>
   </div>
   <div *ngIf="invoices.length > 0">
