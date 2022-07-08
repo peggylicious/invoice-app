@@ -22,6 +22,7 @@ export class InvoiceFormComponent implements OnInit {
     client_email: ['test@client.com'],
     client_name: [''],
     created_at: [''],
+    created_by: [localStorage.getItem('userId')],
     description: [''],
     items: this.fb.array([
       // this.fb.group({
@@ -84,6 +85,7 @@ export class InvoiceFormComponent implements OnInit {
       client_email: selectedInvoice?.['client_email'],
       client_name: selectedInvoice?.['client_name'],
       created_at: selectedInvoice?.['created_at'],
+      created_by: localStorage.getItem('userId'),
       description: '',
       items: selectedInvoice['items'],
       payment_due: selectedInvoice?.['payment_due'],
