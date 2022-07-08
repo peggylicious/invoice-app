@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
     this.auth.loginUser(this.registerForm.value).subscribe({
       next: (result:any) => {
         console.log(result);
+        localStorage.setItem('userId', result.loggedUserId)
         localStorage.setItem('access_token', result.token)
         this.route.navigateByUrl('/home')
       },
