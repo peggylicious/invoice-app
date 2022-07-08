@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { InvoiceCardComponent } from 'src/app/shared/components/invoice-card/invoice-card.component';
 import { ViewInvoiceComponent } from './components/view-invoice/view-invoice.component';
+import { RouterModule } from '@angular/router';
 // import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 
 
@@ -17,6 +18,7 @@ import { ViewInvoiceComponent } from './components/view-invoice/view-invoice.com
   imports: [
     CommonModule, 
     SharedModule,
+    RouterModule
     // InvoiceCardComponent, 
     // HeaderComponent,
     

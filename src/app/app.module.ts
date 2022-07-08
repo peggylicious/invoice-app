@@ -16,6 +16,7 @@ import { DefaultComponent } from './modules/default/default.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { AuthGuard } from './modules/auth/guard/auth.guard';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
 
 export function tokenGetter() {
   console.log("Abbbbbb")
@@ -32,6 +33,7 @@ export function tokenGetter() {
   imports: [
     BrowserModule,
     AppRoutingModule, 
+    RouterModule,
     SharedModule, 
     HomeModule, 
     OthersModule, 
