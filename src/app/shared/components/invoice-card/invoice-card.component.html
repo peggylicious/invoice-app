@@ -4,12 +4,12 @@
       <span class="invoice-title-initial">#</span><span>{{ invoice?.invoice_id }}</span>
       <!-- {{ invoice?.id }} -->
     </p>
-    <p class="invoice-date"> {{ paymentDue | date: 'dd, MMM yyyy' }} </p>
+    <p class="invoice-date"> {{ paymentDue.length  === 0 ? (paymentDue | date: 'dd, MMM yyyy') : "none" }} </p>
     <!-- <p class="invoice-date">Due  19 Aug 2021</p> -->
     <div class="vendor-wrapper">
       <p class="invoice-vendor created-by"> {{ invoice.client_name }} </p>
     </div>
-    <h4 class="amount">{{ total | currency: 'GBP' }}</h4>
+    <h4 class="amount">{{ total ? (total | currency: 'GBP') : 'Nil'}}</h4>
     <div class="invoice-btn-wrapper">
       <app-status-button [status]="invoice.status"></app-status-button>
 
