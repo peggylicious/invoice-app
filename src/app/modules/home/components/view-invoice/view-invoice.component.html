@@ -19,11 +19,11 @@
         <div class="invoice-payment-details">
           <div class="invoice-date">
             <h4 class="section-title">Invoice Date</h4>
-            <p class="bold-title">{{ invoice['created_at'] | date: 'dd, MMM yyyy' }}</p>
+            <p class="bold-title">{{ invoice['created_at']?.length > 0? (invoice['created_at'] | date: 'dd, MMM yyyy') : "Nil" }}</p>
           </div>
           <div class="payment-due">
             <h4 class="section-title">Payment Due</h4>
-            <p class="bold-title">{{ invoice['payment_due'] | date: 'dd, MMM yyyy' }}</p>
+            <p class="bold-title">{{ invoice['payment_due']?.length > 0 ? (invoice['payment_due'] | date: 'dd, MMM yyyy') : "none" }}</p>
           </div>
         </div>
         <div class="bill-to">
@@ -62,7 +62,7 @@
           <td rowspan="2">$800.00</td>
         </tr> -->
         <tfoot>
-          <tr><th>Total</th><td>{{ invoice['total'] | currency: 'GBP' }}</td></tr>
+          <tr><th>Total</th><td>{{ invoice?.['total'] | currency: 'GBP' }}</td></tr>
         </tfoot>
       </table>
     </div>
