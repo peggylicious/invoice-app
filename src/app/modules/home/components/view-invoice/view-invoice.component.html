@@ -6,7 +6,7 @@
   <div class="invoice-details-wrapper">
     <div class="invoice-title-header">
       <h3 class="invoice-no"><span>#</span>{{invoice['invoice_id']}}</h3>
-      <h4 class="invoice-title section-title">Graphic design</h4>
+      <h4 class="invoice-title section-title">{{invoice['description'] || "No description"}}</h4>
       <p class="address address-from">
         <span>{{invoice['senderAddress']?.['street']}}</span>
         <span>{{invoice['senderAddress']?.['city']}}</span>
