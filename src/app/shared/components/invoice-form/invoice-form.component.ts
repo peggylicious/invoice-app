@@ -86,10 +86,10 @@ export class InvoiceFormComponent implements OnInit {
       client_name: selectedInvoice?.['client_name'],
       created_at: selectedInvoice?.['created_at'],
       created_by: localStorage.getItem('userId'),
-      description: '',
+      description: selectedInvoice?.['description'],
       items: selectedInvoice['items'],
       payment_due: selectedInvoice?.['payment_due'],
-      payment_terms: '',
+      payment_terms: selectedInvoice?.['payment_terms'],
       senderAddress: {
         city: selectedInvoice?.['senderAddress']?.city,
         street: selectedInvoice?.['senderAddress']?.street,

@@ -47,6 +47,20 @@
             <input type="text" class="sender-input" name="" id="" formControlName="country">
         </div>
     </div>
+    <div class="others-wrapper">
+        <div class="app-input-wrapper">
+            <label for="">Invoice Date</label>
+            <input type="date" class="sender-input" name="" id="" formControlName="created_at"/>
+          </div> 
+        <div class="app-input-wrapper">
+            <label for="">Payment Terms</label>
+            <input type="text" class="sender-input" name="" id="" formControlName="payment_terms"/>
+          </div> 
+        <div class="app-input-wrapper">
+            <label for="">Project Description</label>
+            <input type="text" class="sender-input" name="" id="" formControlName="description"/>
+          </div> 
+    </div>
     <div class="quoted-item">
         <h3 class="quote-title">Item List</h3>
         <div formArrayName="items">
@@ -82,6 +96,12 @@
         <div class="form-btn-wrapper">
             <button class="add" (click)="postInvoice()">+ Post new invoice</button>
         </div>
+    </div>
+    <div class="others-wrapper">
+        <div class="app-input-wrapper" formGroupName="senderAddress">
+            <label for="">Country</label>
+            <input type="text" class="sender-input" name="" id="" formControlName="country" />
+          </div> 
     </div>
   </form>
 </div>
