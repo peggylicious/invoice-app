@@ -6,6 +6,7 @@
       <div class="app-input-wrapper" formGroupName="senderAddress">
         <label for="sender-address">Street Address</label>
         <input type="text" class="sender-input" name="" id="sender-address" formControlName="street" />
+        <p class="error-field" *ngIf="errorObj?.['senderAddress.street']">{{ receivedError?.['senderAddress']?.['street']?.msg }}</p>
       </div>
       <div class="app-input-wrapper city" formGroupName="senderAddress">
         <label for="">City</label>
@@ -26,13 +27,13 @@
             <!-- <p style="color: #fff; background-color: red;" *ngIf="errorObj['client_name']">Wrong Name</p> -->
             <label for="">Client's Name</label>
             <input type="text" class="sender-input" name="" id="" formControlName="client_name">
-            <p style="color: #fff; background-color: red;" *ngIf="errorObj?.['client_name']">{{ receivedError?.['client_name']?.msg }}</p>
+            <p class="error-field" *ngIf="errorObj?.['client_name']">{{ receivedError?.['client_name']?.msg }}</p>
         </div>
         <div class="app-input-wrapper">
             <!-- <p style="color: #fff;"></p> -->
             <label for="">Clients email</label>
             <input type="email" class="sender-input" name="" id="" formControlName="client_email">
-            <p style="color: #fff; background-color: red;" *ngIf="errorObj?.['client_email']">{{ receivedError?.['client_email']?.msg }}</p>
+            <p class="error-field" *ngIf="errorObj?.['client_email']">{{ receivedError?.['client_email']?.msg }}</p>
         </div>
         <div class="app-input-wrapper" formGroupName="clientAddress">
             <label for="">Street Adress</label>
@@ -55,10 +56,12 @@
         <div class="app-input-wrapper">
             <label for="">Invoice Date</label>
             <input type="date" class="sender-input" name="" id="" formControlName="created_at"/>
+            <p class="error-field" *ngIf="errorObj?.['created_at']">{{ receivedError?.['created_at']?.msg }}</p>
           </div> 
         <div class="app-input-wrapper">
             <label for="">Payment Terms</label>
             <input type="text" class="sender-input" name="" id="" formControlName="payment_terms"/>
+            <p class="error-field" *ngIf="errorObj?.['payment_terms']">{{ receivedError?.['payment_terms']?.msg }}</p>
           </div> 
         <div class="app-input-wrapper">
             <label for="">Project Description</label>

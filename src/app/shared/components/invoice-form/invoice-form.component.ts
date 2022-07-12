@@ -134,6 +134,11 @@ export class InvoiceFormComponent implements OnInit {
         this.receivedError = {}
         err.error.forEach(element => {
           this.errorObj[element["param"]] = false //Reset
+          if(element["param"].includes('.')){ // Simply checks if request parameter is an object
+            this.receivedError[element["param"].split('.')[0]] = {}
+            this.receivedError[element["param"].split('.')[0]]["street"] = element
+            this.errorObj[element["param"]] = true
+          }
           if(this.invoiceDetails.value.hasOwnProperty(element["param"])){ // this.invoiceDetails.value is an object. Helps you eaisly fetch all object properties
             this.receivedError[element["param"]] = element
             this.errorObj[element["param"]] = true

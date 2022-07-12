@@ -134,3 +134,7 @@
     letter-spacing: -0.25px;
     color: var(--inputText);
 }
+.error-field{
+    color: #fff;
+    font-size: 8px;
+}
