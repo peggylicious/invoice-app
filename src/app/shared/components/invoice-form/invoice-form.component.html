@@ -23,12 +23,16 @@
     <div class="receiver-wrapper">
         <h4 class="form-sub-title">Bill to</h4>
         <div class="app-input-wrapper">
+            <!-- <p style="color: #fff; background-color: red;" *ngIf="errorObj['client_name']">Wrong Name</p> -->
             <label for="">Client's Name</label>
             <input type="text" class="sender-input" name="" id="" formControlName="client_name">
+            <p style="color: #fff; background-color: red;" *ngIf="errorObj?.['client_name']">{{ receivedError?.['client_name']?.msg }}</p>
         </div>
         <div class="app-input-wrapper">
+            <!-- <p style="color: #fff;"></p> -->
             <label for="">Clients email</label>
             <input type="email" class="sender-input" name="" id="" formControlName="client_email">
+            <p style="color: #fff; background-color: red;" *ngIf="errorObj?.['client_email']">{{ receivedError?.['client_email']?.msg }}</p>
         </div>
         <div class="app-input-wrapper" formGroupName="clientAddress">
             <label for="">Street Adress</label>
@@ -93,15 +97,16 @@
         <div class="form-btn-wrapper">
             <button class="add" (click)="addItem()">+ Add New Item</button>
         </div>
-        <div class="form-btn-wrapper">
+        <!-- <div class="form-btn-wrapper">
             <button class="add" (click)="postInvoice()">+ Post new invoice</button>
-        </div>
+        </div> -->
     </div>
-    <div class="others-wrapper">
+    <!-- <div class="others-wrapper">
         <div class="app-input-wrapper" formGroupName="senderAddress">
             <label for="">Country</label>
             <input type="text" class="sender-input" name="" id="" formControlName="country" />
           </div> 
-    </div>
+    </div> -->
   </form>
 </div>
+<app-footer (onCreateInvoice)="createInvoice()"></app-footer>

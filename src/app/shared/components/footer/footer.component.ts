@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+// import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-footer',
@@ -16,7 +17,7 @@ export class FooterComponent implements OnInit {
   @Input() buttonTitle = "";
   @Input() buttonState = "";
   @Input() invoiceId = "";
-  
+  @Output() onCreateInvoice = new EventEmitter()
   ngOnInit(): void {
     this.isRouteLink = this.route.url;
     this.isViewInvoiceRouteLink = this.isRouteLink.includes('view-invoice')
@@ -30,5 +31,8 @@ export class FooterComponent implements OnInit {
   }
   getVal(){
   //  return this.isRouteLink === 'modify/create' ? true
+  }
+  createInvoice(){
+    this.onCreateInvoice.emit("Hello")
   }
 }

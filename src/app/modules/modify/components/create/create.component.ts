@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-create',
@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class CreateComponent implements OnInit {
 
   constructor() { }
+  @Output() onCreateInvoice = new EventEmitter()
 
   ngOnInit(): void {
   }
-
+  creatingInvoice(){
+    console.log("From create component")
+    this.onCreateInvoice.emit("From create component")
+  }
 }

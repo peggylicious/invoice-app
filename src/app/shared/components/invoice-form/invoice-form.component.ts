@@ -43,6 +43,8 @@ export class InvoiceFormComponent implements OnInit {
     status: [''],
     total: [''],
   });
+  errorObj: {[key:string]: boolean} = {clientAddress: false, client_name: false, client_email: false}
+  receivedError: {[key:string]: any} = {}
   @Input() pageTitle:any = ""
 
   constructor(
@@ -121,12 +123,22 @@ export class InvoiceFormComponent implements OnInit {
       total:['']
     }))
   }
-  postInvoice(){
+  createInvoice(){
     console.log(this.invoiceDetails.value.items)
     // this.invoiceDetails.value.items
     this.invoiceService.addInvoice(this.invoiceDetails.value).subscribe({
       next: (result)=>{
         console.log(result)
+      },
+      error: (err:{error:[{[key: string]: any;}]}) => {
+        this.receivedError = {}
+        err.error.forEach(element => {
+          this.errorObj[element["param"]] = false //Reset
+          if(this.invoiceDetails.value.hasOwnProperty(element["param"])){ // this.invoiceDetails.value is an object. Helps you eaisly fetch all object properties
+            this.receivedError[element["param"]] = element
+            this.errorObj[element["param"]] = true
+          }
+        });
       }
     })
   }

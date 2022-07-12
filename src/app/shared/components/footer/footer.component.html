@@ -1,7 +1,7 @@
 <div class="footer-wrapper" *ngIf="isRouteLink === '/modify/create'">
     <app-footer-button [buttonTitle]="'discard'" [buttonState]="'Discard'"></app-footer-button>
     <app-footer-button [buttonTitle]="'save as draft'" [buttonState]="'draft'"></app-footer-button>
-    <app-footer-button [buttonTitle]="'save & send'" [buttonState]="'save'" ></app-footer-button>
+    <app-footer-button [buttonTitle]="'save & send'" [buttonState]="'save'" (click)="createInvoice()"c></app-footer-button>
 </div>
 <div class="footer-wrapper" *ngIf="isRouteLink === '/modify/edit'">
     <app-footer-button [buttonTitle]="'cancel'" [buttonState]="'discard'"></app-footer-button>
