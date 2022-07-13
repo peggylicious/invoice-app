@@ -11,6 +11,7 @@
       <div class="app-input-wrapper city" formGroupName="senderAddress">
         <label for="">City</label>
         <input type="text" class="sender-input" name="" id="" formControlName="city" />
+        <p class="error-field" *ngIf="errorObj?.['senderAddress.city']">{{ receivedError?.['senderAddress']?.['city']?.msg }}</p>
       </div>
       <div class="app-input-wrapper postcode" formGroupName="senderAddress">
         <label for="">Postcode</label>
