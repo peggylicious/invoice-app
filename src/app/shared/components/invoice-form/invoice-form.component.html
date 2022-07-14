@@ -16,10 +16,12 @@
       <div class="app-input-wrapper postcode" formGroupName="senderAddress">
         <label for="">Postcode</label>
         <input type="text" class="sender-input" name="" id="" formControlName="postCode"/>
+        <p class="error-field" *ngIf="errorObj?.['senderAddress.postCode']">{{ receivedError?.['senderAddress']?.['postCode']?.msg }}</p>
       </div>
       <div class="app-input-wrapper" formGroupName="senderAddress">
         <label for="">Country</label>
         <input type="text" class="sender-input" name="" id="" formControlName="country" />
+        <p class="error-field" *ngIf="errorObj?.['senderAddress.country']">{{ receivedError?.['senderAddress']?.['country']?.msg }}</p>
       </div>
     </div>
     <div class="receiver-wrapper">
