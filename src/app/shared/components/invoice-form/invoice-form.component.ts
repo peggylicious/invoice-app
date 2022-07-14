@@ -135,8 +135,27 @@ export class InvoiceFormComponent implements OnInit {
         err.error.forEach(element => {
           this.errorObj[element["param"]] = false //Reset
           if(element["param"].includes('.')){ // Simply checks if request parameter is an object
-            this.receivedError[element["param"].split('.')[0]] = {}
-            this.receivedError[element["param"].split('.')[0]]["street"] = element
+            let address;
+            console.log(this.receivedError[element["param"].split('.')[0]])
+            console.log("Add ", address)
+            // if(typeof this.receivedError[element["param"].split('.')[0]] === "undefined"){
+              if(element["param"].split('.')[0]  in this.receivedError && Object.keys(this.receivedError[element["param"].split('.')[0]].length !== 0)){
+              // console.log("Not def")
+              // address = element["param"].split('.')[0]
+              // this.receivedError[address] = {}
+              // this.receivedError[address][element["param"].split('.')[1]] = element
+              this.receivedError[element["param"].split('.')[0]][element["param"].split('.')[1]] = element
+            }else{
+              console.log("Not def")
+              address = element["param"].split('.')[0]
+              this.receivedError[address] = {}
+              this.receivedError[element["param"].split('.')[0]][element["param"].split('.')[1]] = element
+
+            }
+            // element["param"].split('.')[1] = {}
+              // this.receivedError[element["param"].split('.')[0]][element["param"].split('.')[1]] = element
+
+            // }
             this.errorObj[element["param"]] = true
           }
           if(this.invoiceDetails.value.hasOwnProperty(element["param"])){ // this.invoiceDetails.value is an object. Helps you eaisly fetch all object properties
@@ -144,6 +163,8 @@ export class InvoiceFormComponent implements OnInit {
             this.errorObj[element["param"]] = true
           }
         });
+        console.log(this.receivedError)
+
       }
     })
   }
