@@ -123,6 +123,10 @@ export class InvoiceFormComponent implements OnInit {
       total:['']
     }))
   }
+  deleteItem(binIndex: number){
+    console.log("Index, " + binIndex)
+    return this.items.removeAt(binIndex)
+  }
   createInvoice(){
     console.log(this.invoiceDetails.value.items)
     // this.invoiceDetails.value.items
