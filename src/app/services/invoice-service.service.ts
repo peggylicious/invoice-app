@@ -15,4 +15,8 @@ export class InvoiceServiceService {
     console.log(data)
     return this.http.post<Invoice[]>(`${this.invoiceUrl}create`, data) 
   }
+  editInvoice(data:any, invoiceId:any){
+    console.log(data)
+    return this.http.put<Invoice[]>(`${this.invoiceUrl}update/${invoiceId}`, data) 
+  }
 }
