@@ -73,7 +73,8 @@
         <div class="app-input-wrapper">
             <label for="">Project Description</label>
             <input type="text" class="sender-input" name="" id="" formControlName="description"/>
-          </div> 
+            <p class="error-field" *ngIf="errorObj?.['description']">{{ receivedError?.['description']?.msg }}</p>  
+        </div> 
     </div>
     <div class="quoted-item">
         <h3 class="quote-title">Item List</h3>
