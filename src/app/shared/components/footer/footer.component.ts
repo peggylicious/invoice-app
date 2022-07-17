@@ -14,12 +14,14 @@ export class FooterComponent implements OnInit {
   name:any;
   isRouteLink:any;
   isViewInvoiceRouteLink:boolean = false;
+  isEditRouteLink:boolean = false;
   @Input() buttonTitle = "";
   @Input() buttonState = "";
   @Input() invoiceId = "";
   @Output() onCreateInvoice = new EventEmitter()
   ngOnInit(): void {
     this.isRouteLink = this.route.url;
+    this.isEditRouteLink = this.isRouteLink.includes("edit")
     this.isViewInvoiceRouteLink = this.isRouteLink.includes('view-invoice')
     console.log(this.isRouteLink)
     console.log(this.route.url)
@@ -34,5 +36,8 @@ export class FooterComponent implements OnInit {
   }
   createInvoice(){
     this.onCreateInvoice.emit("Hello")
+  }
+  editInvoice(){
+    console.log("edit")
   }
 }

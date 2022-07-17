@@ -3,7 +3,7 @@
     <app-footer-button [buttonTitle]="'save as draft'" [buttonState]="'draft'"></app-footer-button>
     <app-footer-button [buttonTitle]="'save & send'" [buttonState]="'save'" (click)="createInvoice()"c></app-footer-button>
 </div>
-<div class="footer-wrapper" *ngIf="isRouteLink === '/modify/edit'">
+<div class="footer-wrapper" *ngIf="isEditRouteLink">
     <app-footer-button [buttonTitle]="'cancel'" [buttonState]="'discard'"></app-footer-button>
 
     <app-footer-button [buttonTitle]="'save changes'" [buttonState]="'save'" ></app-footer-button>
@@ -11,7 +11,7 @@
 
 </div>
 <div class="footer-wrapper" *ngIf="isViewInvoiceRouteLink">
-    <app-footer-button [buttonTitle]="'edit'" [buttonState]="'edit'" [invoiceId]="invoiceId"></app-footer-button>
+    <app-footer-button [buttonTitle]="'edit'" [buttonState]="'edit'" [invoiceId]="invoiceId" (click)="editInvoice()"></app-footer-button>
 
     <app-footer-button [buttonTitle]="'delete'" [buttonState]="'delete'" [invoiceId]="invoiceId"></app-footer-button>
     <app-footer-button [buttonTitle]="'Mark as Paid'" [buttonState]="'paid'"></app-footer-button>
