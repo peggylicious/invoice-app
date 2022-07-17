@@ -168,4 +168,9 @@ export class InvoiceFormComponent implements OnInit {
       }
     })
   }
+  editInvoice(){
+    this.invoiceService.editInvoice(this.invoiceDetails.value, this.invoiceId).subscribe({next: (result)=>{
+      console.log(result)
+    }})
+  }
 }
