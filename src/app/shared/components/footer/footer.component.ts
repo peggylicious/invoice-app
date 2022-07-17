@@ -19,6 +19,8 @@ export class FooterComponent implements OnInit {
   @Input() buttonState = "";
   @Input() invoiceId = "";
   @Output() onCreateInvoice = new EventEmitter()
+  @Output() onEditInvoice = new EventEmitter()
+
   ngOnInit(): void {
     this.isRouteLink = this.route.url;
     this.isEditRouteLink = this.isRouteLink.includes("edit")
@@ -38,6 +40,6 @@ export class FooterComponent implements OnInit {
     this.onCreateInvoice.emit("Hello")
   }
   editInvoice(){
-    console.log("edit")
+    this.onEditInvoice.emit("Hello")
   }
 }
