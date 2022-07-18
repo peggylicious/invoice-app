@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## About project structure
 The module titled **others** is a seperate layout for all pages that have a footer
+
+<!-- https://stackoverflow.com/questions/35446955/how-to-go-back-last-page -->
+<!-- https://howtojs.io/how-to-access-previous-route-page-url-in-angular-12/-->
