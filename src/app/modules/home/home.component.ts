@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { InvoiceServiceService } from 'src/app/services/invoice-service.service';
 import { SharedService } from 'src/app/shared/services/shared.service';
 import { Invoice } from 'src/app/shared/interfaces/invoice';
+import { PreviousUrlService } from 'src/app/shared/services/previous-url.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,11 +11,13 @@ import { Invoice } from 'src/app/shared/interfaces/invoice';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private inv: InvoiceServiceService, private sharedservice: SharedService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private inv: InvoiceServiceService, private sharedservice: SharedService, private route: ActivatedRoute, private router: Router, private previousUrlService: PreviousUrlService) { }
   buttonState = 'delete'
   buttonTitle = 'delete';
   invoices: Invoice[] = []
   ngOnInit(): void {
+    console.log(this.previousUrlService.getPreviousUrl())
+
     this.inv.getAllInvoice().subscribe({
       next: (result:any)=>{
         this.invoices = result

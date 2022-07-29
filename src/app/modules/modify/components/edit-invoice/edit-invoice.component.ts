@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PreviousUrlService } from 'src/app/shared/services/previous-url.service';
 
 @Component({
   selector: 'app-edit-invoice',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditInvoiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private previousUrlService: PreviousUrlService) { }
 
   ngOnInit(): void {
+    console.log(this.previousUrlService.getPreviousUrl())
   }
 
 }

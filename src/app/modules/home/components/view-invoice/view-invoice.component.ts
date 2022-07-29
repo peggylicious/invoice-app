@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { InvoiceServiceService } from 'src/app/services/invoice-service.service';
 import { Invoice } from 'src/app/shared/interfaces/invoice';
+import { PreviousUrlService } from 'src/app/shared/services/previous-url.service';
 @Component({
   selector: 'app-view-invoice',
   templateUrl: './view-invoice.component.html',
@@ -9,10 +10,11 @@ import { Invoice } from 'src/app/shared/interfaces/invoice';
 })
 export class ViewInvoiceComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private invoiceservice: InvoiceServiceService) { }
+  constructor(private route: ActivatedRoute, private invoiceservice: InvoiceServiceService, private previousUrlService: PreviousUrlService) { }
   id: string = "";
   invoice:Invoice = {};
   ngOnInit(): void {
+    console.log(this.previousUrlService.getPreviousUrl())
     this.getInvoiceDetails()
   }
   getInvoiceDetails(){

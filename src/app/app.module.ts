@@ -17,6 +17,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { AuthGuard } from './modules/auth/guard/auth.guard';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
+import { PreviousUrlService } from './shared/services/previous-url.service';
 
 export function tokenGetter() {
   console.log("Abbbbbb")
@@ -54,7 +55,7 @@ export function tokenGetter() {
       },
     })
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, PreviousUrlService],
   bootstrap: [AppComponent], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
