@@ -1,0 +1,19 @@
+span{
+    font-family: 'Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height, or 125% */
+
+letter-spacing: -0.25px;
+
+color: var(--white);
+margin-left: 23px;
+}
+button{
+    background: transparent;
+    outline: none;
+    border: none;
+    margin-bottom: 32px;
+}
