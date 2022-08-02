@@ -11,7 +11,7 @@ export class EditInvoiceComponent implements OnInit {
   constructor(private previousUrlService: PreviousUrlService) { }
 
   ngOnInit(): void {
-    console.log(this.previousUrlService.getPreviousUrl())
+    // console.log(this.previousUrlService.getPreviousUrl())
   }
 
 }

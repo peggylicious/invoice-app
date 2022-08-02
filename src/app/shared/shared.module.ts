@@ -8,6 +8,7 @@ import { FooterButtonComponent } from './components/footer-button/footer-button.
 import { FooterComponent } from './components/footer/footer.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GoBackButtonComponent } from './components/go-back-button/go-back-button.component';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     InvoiceFormComponent, 
     InvoiceCardComponent, 
     HeaderComponent, 
-    FooterButtonComponent, FooterComponent, DeleteModalComponent
+    FooterButtonComponent, FooterComponent, DeleteModalComponent, GoBackButtonComponent
   ],
   imports: [
     CommonModule, ReactiveFormsModule
@@ -28,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterButtonComponent, 
     FooterComponent, 
     InvoiceFormComponent, 
-    DeleteModalComponent
+    DeleteModalComponent,
+    GoBackButtonComponent
   ]
 })
 export class SharedModule { }
