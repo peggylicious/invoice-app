@@ -14,14 +14,17 @@ export class PreviousUrlService {
   constructor( public router: Router) { 
     this.currentUrl = this.router.url;
     console.log("Current URL, ", this.currentUrl)
-        this.previousUrl = null;
+        // this.previousUrl = null;
         router.events.pipe(
           filter((e: Event): e is RouterEvent => e instanceof NavigationEnd)
        ).subscribe((e: RouterEvent) => {
          // Do something
-         console.log(e)
+        //  console.log(e.url)
          this.previousUrl = this.currentUrl
+         this.currentUrl = e.url
+    console.log("Current URL, ", this.currentUrl)
     console.log("Previous URL, ", this.previousUrl)
+
 
        });
   }

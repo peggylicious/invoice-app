@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InvoiceServiceService } from 'src/app/services/invoice-service.service';
 import { SharedService } from 'src/app/shared/services/shared.service';
@@ -9,7 +9,7 @@ import { PreviousUrlService } from 'src/app/shared/services/previous-url.service
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(private inv: InvoiceServiceService, private sharedservice: SharedService, private route: ActivatedRoute, private router: Router, private previousUrlService: PreviousUrlService) { }
   buttonState = 'delete'
@@ -43,4 +43,7 @@ export class HomeComponent implements OnInit {
     // })
    
   }
+//   ngOnDestroy() {
+//     this.previousUrlService.getPreviousUrl()
+// }
 }
