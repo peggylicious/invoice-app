@@ -9,7 +9,7 @@ import { PreviousUrlService } from 'src/app/shared/services/previous-url.service
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit{
 
   constructor(private inv: InvoiceServiceService, private sharedservice: SharedService, private route: ActivatedRoute, private router: Router, private previousUrlService: PreviousUrlService) { }
   buttonState = 'delete'
