@@ -14,7 +14,7 @@ export class ViewInvoiceComponent implements OnInit {
   id: string = "";
   invoice:Invoice = {};
   ngOnInit(): void {
-    console.log(this.previousUrlService.getPreviousUrl())
+    // console.log(this.previousUrlService.getPreviousUrl())
     this.getInvoiceDetails()
   }
   getInvoiceDetails(){

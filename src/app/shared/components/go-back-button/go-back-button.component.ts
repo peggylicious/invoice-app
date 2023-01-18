@@ -12,7 +12,7 @@ export class GoBackButtonComponent implements OnInit {
   constructor(private previousUrlService: PreviousUrlService, private route: Router) { }
   @Output() goToPrevPage = new EventEmitter();
   ngOnInit(): void {
-    console.log(this.previousUrlService.getPreviousUrl())
+    // console.log(this.previousUrlService.getPreviousUrl())
   }
   goToPreviousPage(){
     this.route.navigateByUrl(this.previousUrlService.getPreviousUrl())

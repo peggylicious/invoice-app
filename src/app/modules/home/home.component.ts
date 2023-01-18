@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit{
   buttonTitle = 'delete';
   invoices: Invoice[] = []
   ngOnInit(): void {
-    console.log(this.previousUrlService.getPreviousUrl())
+    // console.log(this.previousUrlService.getPreviousUrl())
 
     this.inv.getAllInvoice().subscribe({
       next: (result:any)=>{

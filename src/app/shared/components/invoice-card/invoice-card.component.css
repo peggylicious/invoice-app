@@ -18,13 +18,20 @@
 .invoice-no{
     color: var(--primaryText);
     width: 50%;
-    order: 1;
+    /* order: 1; */
     margin-bottom: 24px;
+}
+.invoice-no .invoice-id{
+    font-weight: 700;
+}
+.card-group{
+    width: 50%;
 }
 .invoice-date{
     color: var(--whiteLight);
-    width: 50%;
-    order: 3;
+    width: 100%;
+    margin-bottom: 8px;
+    /* order: 3; */
 }
 .invoice-vendor{
     color: var(--whiteLight);
@@ -33,20 +40,22 @@
 }
 .amount{
     color: var(--primaryText);
-    width: 50%;
+    /* width: 50%; */
     font-size: 16px;
-    order: 5;
-    margin-top: -19px;
+    font-weight: 700;
+    line-height: 24px;
+    /* order: 5; */
+    /* margin-top: -19px; */
 }
 .invoice-btn-wrapper{
     width: 50%;
-    order: 4;
+    /* order: 4; */
     text-align: right;
     display: flex;
     justify-content: right;
 }
 .vendor-wrapper{
-    order: 2;
+    /* order: 2; */
 }
 .invoice-card-content > *{
     /* flex-basis: 100%; */

@@ -5,7 +5,9 @@ import { Invoice } from '../shared/interfaces/invoice';
   providedIn: 'root'
 })
 export class InvoiceServiceService {
-  invoiceUrl = "https://invoice-api-0.herokuapp.com/invoice/"
+  // invoiceUrl = "https://invoice-api-0.herokuapp.com/invoice/";
+  invoiceUrl = "http://localhost:3000/invoice/";
+
   constructor(private http: HttpClient) { }
   getAllInvoice(){
     return this.http.get<Invoice[]>(`${this.invoiceUrl}all`)
