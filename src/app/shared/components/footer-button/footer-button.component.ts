@@ -19,6 +19,10 @@ export class FooterButtonComponent implements OnInit {
     if(x === 'edit'){
       this.route.navigateByUrl(`/modify/edit/${this.invoiceId}`, {state: {formType: 'edit', invoiceId: ''}})
     }
+    // if x === PatternValidator, update invoice
+    if (x === 'paid'){
+
+    }
     console.log(x)
   }
 }

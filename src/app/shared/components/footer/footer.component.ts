@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { InvoiceServiceService } from 'src/app/services/invoice-service.service';
 // import { EventEmitter } from 'stream';
 
 @Component({
@@ -9,7 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute, private route: Router) { }
+  constructor(private activatedRoute: ActivatedRoute, private route: Router, private invoiceService: InvoiceServiceService) { }
   items = [];
   name:any;
   isRouteLink:any;
@@ -41,5 +42,19 @@ export class FooterComponent implements OnInit {
   }
   editInvoice(){
     this.onEditInvoice.emit("Hello")
+  }
+  openInvoiceForm(x?:any){
+    // if(x === 'edit'){
+      this.route.navigateByUrl(`/modify/edit/${this.invoiceId}`, {state: {formType: 'edit', invoiceId: ''}})
+    // }
+    // if x === PatternValidator, update invoice
+    // if (x === 'paid'){
+
+    // }
+  }
+  markAsPaid(){
+    this.invoiceService.editInvoice({'status': 'paid'}, this.invoiceId).subscribe(x=>{
+
+    })
   }
 }
