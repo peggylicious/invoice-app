@@ -86,15 +86,15 @@
                 </div>
                 <div class="app-input-wrapper qty" [formGroupName]="i">
                     <label for="">Qty:</label>
-                    <input type="number" class="sender-input" name="" id="" formControlName="quantity">
+                    <input type="number" class="sender-input" name="" id="" formControlName="quantity" (keyup)="productTotal(item, i)">
                 </div>
                 <div class="app-input-wrapper price" [formGroupName]="i">
                     <label for="">Price</label>
-                    <input type="text" class="sender-input" name="" id="" formControlName="price">
+                    <input type="number" class="sender-input" name="" id="" formControlName="price" (keyup)="productTotal(item, i)">
                 </div>
                 <div class="app-input-wrapper total">
                     <label for="">Total</label>
-                    <p>{{  invoice['total']}}</p>
+                    <p>{{  item.value.total }}</p>
                 </div>
                 <div class="app-input-wrapper bin-bag">
                     <label for="" style="visibility: hidden;">Bin</label>

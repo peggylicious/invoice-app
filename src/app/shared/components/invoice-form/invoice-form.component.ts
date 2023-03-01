@@ -11,7 +11,7 @@ import { Invoice } from '../../interfaces/invoice';
 export class InvoiceFormComponent implements OnInit {
   invoiceId: any;
   invoice: Invoice = {};
-  invoiceDetails = this.fb.group({
+  invoiceDetails:any = this.fb.group({
     clientAddress: this.fb.group({
       city: [''],
       street: ['Taimaka street'],
@@ -45,6 +45,7 @@ export class InvoiceFormComponent implements OnInit {
   });
   errorObj: {[key:string]: boolean} = {clientAddress: false, client_name: false, client_email: false}
   receivedError: {[key:string]: any} = {}
+  sumTotal: number = 0
   @Input() pageTitle:any = ""
 
   constructor(
@@ -116,19 +117,21 @@ export class InvoiceFormComponent implements OnInit {
     console.log(this.items)
   }
   addItem(){
-    return this.items.push(this.fb.group({
+    const item = this.items.push(this.fb.group({
       name: [''],
       quantity: [''], 
       price: [''],
       total:['']
     }))
+    return item
   }
   deleteItem(binIndex: number){
     console.log("Index, " + binIndex)
     return this.items.removeAt(binIndex)
   }
   createInvoice(){
-    console.log(this.invoiceDetails.value.items)
+    this.allProductTotal()
+    console.log(this.invoiceDetails)
     // this.invoiceDetails.value.items
     this.invoiceService.addInvoice(this.invoiceDetails.value).subscribe({
       next: (result)=>{
@@ -176,5 +179,13 @@ export class InvoiceFormComponent implements OnInit {
     this.invoiceService.editInvoice(this.invoiceDetails.value, this.invoiceId).subscribe({next: (result)=>{
       console.log(result)
     }})
+  }
+  productTotal(item:any, i:any){
+    this.sumTotal = (parseInt(item.value.price) || 0) * (parseInt(item.value.quantity) || 0)
+    this.invoiceDetails.value.items[i].total = this.sumTotal
+  }
+  allProductTotal(){
+    let sumOfAllitems = this.invoiceDetails.value.items.reduce((acc:any, item:any)=>acc + item.total, 0)
+    this.invoiceDetails.value.total = sumOfAllitems
   }
 }
