@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DeleteModalComponent } from './components/delete-modal/delete-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GoBackButtonComponent } from './components/go-back-button/go-back-button.component';
+import { MatMenuModule } from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -20,7 +22,7 @@ import { GoBackButtonComponent } from './components/go-back-button/go-back-butto
     FooterButtonComponent, FooterComponent, DeleteModalComponent, GoBackButtonComponent
   ],
   imports: [
-    CommonModule, ReactiveFormsModule
+    CommonModule, ReactiveFormsModule, MatMenuModule,MatIconModule
   ],
   exports: [
     StatusButtonComponent, 

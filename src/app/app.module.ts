@@ -18,7 +18,9 @@ import { AuthGuard } from './modules/auth/guard/auth.guard';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { PreviousUrlService } from './shared/services/previous-url.service';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 export function tokenGetter() {
   console.log("Abbbbbb")
   return localStorage.getItem("access_token");
@@ -53,7 +55,10 @@ export function tokenGetter() {
         allowedDomains: ["invoice-api-0.herokuapp.com", "localhost:4315", "localhost:3000"],
         disallowedRoutes: ["http://example.com/examplebadroute/"],
       },
-    })
+    }), 
+    BrowserAnimationsModule, 
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [AuthGuard, PreviousUrlService],
   bootstrap: [AppComponent], 
