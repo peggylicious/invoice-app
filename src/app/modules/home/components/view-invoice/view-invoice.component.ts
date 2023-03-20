@@ -13,6 +13,7 @@ export class ViewInvoiceComponent implements OnInit {
   constructor(private route: ActivatedRoute, private invoiceservice: InvoiceServiceService, private previousUrlService: PreviousUrlService) { }
   id: string = "";
   invoice:Invoice = {};
+  status: string = ''
   ngOnInit(): void {
     // console.log(this.previousUrlService.getPreviousUrl())
     this.getInvoiceDetails()
@@ -35,5 +36,9 @@ export class ViewInvoiceComponent implements OnInit {
         })
       }
     })
+  }
+  updateStatus(event:any){
+    console.log("On emit")
+    return this.status = event
   }
 }
