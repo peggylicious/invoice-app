@@ -21,6 +21,7 @@ export class FooterComponent implements OnInit {
   @Input() invoiceId = "";
   @Output() onCreateInvoice = new EventEmitter()
   @Output() onEditInvoice = new EventEmitter()
+  @Output() onUpdateStatus = new EventEmitter()
 
   ngOnInit(): void {
     this.isRouteLink = this.route.url;
@@ -54,7 +55,7 @@ export class FooterComponent implements OnInit {
   }
   markAsPaid(){
     this.invoiceService.editInvoice({'status': 'paid'}, this.invoiceId).subscribe(x=>{
-
+    this.onUpdateStatus.emit("paid")
     })
   }
 }
