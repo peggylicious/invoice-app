@@ -17,9 +17,11 @@ export class AuthService {
     // return false;
   }
   registerUser(data:any){
-    return this.http.post('https://invoice-api-0.herokuapp.com/user/signup', data)
+    // return this.http.post('https://invoice-api-0.herokuapp.com/user/signup', data)
+    return this.http.post('http://localhost:300/user/signup', data)
   }
   loginUser(data:any){
-    return this.http.post('https://invoice-api-0.herokuapp.com/user/login', data)
+    return this.http.post('http://localhost:3000/user/login', data)
+    // return this.http.post('https://invoice-api-0.herokuapp.com/user/login', data)
   }
 }
