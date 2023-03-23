@@ -25,6 +25,9 @@ export class InvoiceServiceService {
     console.log(data)
     return this.http.put<Invoice[]>(`${this.invoiceUrl}update/${invoiceId}`, data) 
   }
+  getInvoice(invoiceId:any){
+    return this.http.get<Invoice[]>(`${this.invoiceUrl}invoice/${invoiceId}`) 
+  }
   public getAllInvoice(): Observable<Invoice[]>{
     return this.invoices$
   }
