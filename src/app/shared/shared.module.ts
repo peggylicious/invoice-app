@@ -11,6 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GoBackButtonComponent } from './components/go-back-button/go-back-button.component';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { InvoiceModalComponent } from './components/invoice-modal/invoice-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -19,10 +21,10 @@ import {MatIconModule} from '@angular/material/icon';
     InvoiceFormComponent, 
     InvoiceCardComponent, 
     HeaderComponent, 
-    FooterButtonComponent, FooterComponent, DeleteModalComponent, GoBackButtonComponent
+    FooterButtonComponent, FooterComponent, DeleteModalComponent, GoBackButtonComponent, InvoiceModalComponent
   ],
   imports: [
-    CommonModule, ReactiveFormsModule, MatMenuModule,MatIconModule
+    CommonModule, ReactiveFormsModule, MatMenuModule,MatIconModule, MatDialogModule
   ],
   exports: [
     StatusButtonComponent, 
@@ -33,6 +35,7 @@ import {MatIconModule} from '@angular/material/icon';
     InvoiceFormComponent, 
     DeleteModalComponent,
     GoBackButtonComponent
-  ]
+  ],
+  entryComponents:[InvoiceModalComponent]
 })
 export class SharedModule { }
