@@ -4,6 +4,7 @@ import { InvoiceServiceService } from 'src/app/services/invoice-service.service'
 import { SharedService } from 'src/app/shared/services/shared.service';
 import { Invoice } from 'src/app/shared/interfaces/invoice';
 import { PreviousUrlService } from 'src/app/shared/services/previous-url.service';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,19 +15,20 @@ export class HomeComponent implements OnInit{
   constructor(private inv: InvoiceServiceService, private sharedservice: SharedService, private route: ActivatedRoute, private router: Router, private previousUrlService: PreviousUrlService) { }
   buttonState = 'delete'
   buttonTitle = 'delete';
-  invoices: Invoice[] = []
+  invoices$!: Observable<any>
   ngOnInit(): void {
     // console.log(this.previousUrlService.getPreviousUrl())
-
-    this.inv.getAllInvoice().subscribe({
-      next: (result:any)=>{
-        this.invoices = result
-        console.log(result)
-      }, 
-      error: (err)=>{
-        console.log(err)
-      }
-    })
+    this.inv.getAllInvoiceRemote()
+    this.invoices$ = this.inv.getAllInvoice()
+    // this.inv.getAllInvoice().subscribe({
+    //   next: (result:any)=>{
+    //     this.invoices = result
+    //     console.log(result)
+    //   }, 
+    //   error: (err)=>{
+    //     console.log(err)
+    //   }
+    // })
   }
   openInvoice(id:any){
     // this.sharedservice.displayInvoice(id)

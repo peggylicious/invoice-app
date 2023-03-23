@@ -3,7 +3,7 @@
 <div class="invoice-view">
   <div class="invoice-status-wrapper">
     <p class="status-title">Status</p>
-    <app-status-button [status]="invoice['status']"></app-status-button>
+    <app-status-button [status]="status || invoice['status']"></app-status-button>
   </div>
   <div class="invoice-details-wrapper">
     <div class="invoice-title-header">
@@ -53,7 +53,7 @@
           </tr>
           <tr class="row-data">
             <td>{{ item.price * item.quantity | currency: 'GBP'}}</td>
-            <td>$212.00</td>
+            <td>{{ item.total | currency: 'GBP' }}</td>
           </tr>
         </tbody>
         <!-- <tr>
@@ -69,5 +69,5 @@
       </table>
     </div>
   </div>
-  <app-footer [invoiceId]="id"></app-footer>
+  <app-footer [invoiceId]="id" (onUpdateStatus)="status = $event"></app-footer>
 </div>

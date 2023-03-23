@@ -2,7 +2,7 @@
   <div class="page-title-wrapper">
     <div class="page-title">
       <h2 class="page-title">Invoices</h2>
-      <p class="total-invoice">There are {{invoices.length}} total invoices</p>
+      <p class="total-invoice">There are {{(invoices$ | async).length}} total invoices</p>
     </div>
     <div class="status-filter">
       <select name="" id="">
@@ -24,10 +24,10 @@
       </a>
     </div>
   </div>
-  <div *ngIf="invoices.length > 0">
-    <app-invoice-card *ngFor="let invoice of invoices" [invoice]="invoice" (click)="openInvoice(invoice['invoice_id'])"></app-invoice-card>
+  <div *ngIf="(invoices$ |async).length > 0">
+    <app-invoice-card *ngFor="let invoice of invoices$ | async" [invoice]="invoice" (click)="openInvoice(invoice['invoice_id'])"></app-invoice-card>
   </div>
-  <div *ngIf="invoices.length < 1">
+  <div *ngIf="(invoices$|async).length < 1">
     <div class="no-invoice-wrapper">
       <img src="../../../assets/images/illustration-empty.svg" alt="No invoice available">
       <h2>There is nothing here</h2>

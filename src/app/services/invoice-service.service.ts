@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Invoice } from '../shared/interfaces/invoice';
+import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class InvoiceServiceService {
   // invoiceUrl = "https://invoice-api-0.herokuapp.com/invoice/";
   invoiceUrl = "http://localhost:3000/invoice/";
+  private invoices$ = new BehaviorSubject<Invoice[]>([]);
 
   constructor(private http: HttpClient) { }
-  getAllInvoice(){
-    return this.http.get<Invoice[]>(`${this.invoiceUrl}all`)
+  getAllInvoiceRemote(){
+    this.http.get<Invoice[]>(`${this.invoiceUrl}all`).subscribe(invoices => {
+      this.invoices$.next(invoices)
+    })
   }
   addInvoice(data:any){
     // data = new FormData(data)
@@ -20,5 +24,11 @@ export class InvoiceServiceService {
   editInvoice(data:any, invoiceId:any){
     console.log(data)
     return this.http.put<Invoice[]>(`${this.invoiceUrl}update/${invoiceId}`, data) 
+  }
+  getInvoice(invoiceId:any){
+    return this.http.get<Invoice[]>(`${this.invoiceUrl}invoice/${invoiceId}`) 
+  }
+  public getAllInvoice(): Observable<Invoice[]>{
+    return this.invoices$
   }
 }
