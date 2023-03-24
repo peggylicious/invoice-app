@@ -56,15 +56,8 @@
             <td>{{ item.total | currency: 'GBP' }}</td>
           </tr>
         </tbody>
-        <!-- <tr>
-          <th class="t-heading">Email design</th>
-        </tr>
-        <tr class="row-data">
-          <td>$200 * 4</td>
-          <td rowspan="2">$800.00</td>
-        </tr> -->
         <tfoot>
-          <tr><th>Total</th><td>{{ invoice?.['total'] | currency: 'GBP' }}</td></tr>
+          <tr><th>Total</th><td>{{ invoice['total'] | currency: 'GBP' }}</td></tr>
         </tfoot>
       </table>
     </div>
