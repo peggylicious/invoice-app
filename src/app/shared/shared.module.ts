@@ -13,7 +13,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { InvoiceModalComponent } from './components/invoice-modal/invoice-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +22,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     InvoiceFormComponent, 
     InvoiceCardComponent, 
     HeaderComponent, 
-    FooterButtonComponent, FooterComponent, DeleteModalComponent, GoBackButtonComponent, InvoiceModalComponent
+    FooterButtonComponent, FooterComponent, DeleteModalComponent, GoBackButtonComponent, InvoiceModalComponent, LoaderComponent
   ],
   imports: [
-    CommonModule, ReactiveFormsModule, MatMenuModule,MatIconModule, MatDialogModule
+    CommonModule, ReactiveFormsModule, MatMenuModule,MatIconModule, MatDialogModule, MatProgressSpinnerModule
   ],
   exports: [
     StatusButtonComponent, 
@@ -34,7 +35,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     FooterComponent, 
     InvoiceFormComponent, 
     DeleteModalComponent,
-    GoBackButtonComponent
+    GoBackButtonComponent,
+    InvoiceModalComponent, 
+    LoaderComponent
   ],
   entryComponents:[InvoiceModalComponent]
 })

@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JwtModule } from "@auth0/angular-jwt";
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +21,7 @@ import { PreviousUrlService } from './shared/services/previous-url.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
 export function tokenGetter() {
   console.log("Abbbbbb")
   return localStorage.getItem("access_token");
@@ -60,7 +61,11 @@ export function tokenGetter() {
     MatMenuModule,
     MatIconModule
   ],
-  providers: [AuthGuard, PreviousUrlService],
+  providers: [AuthGuard, PreviousUrlService,  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoaderInterceptor,
+    multi: true,
+ },],
   bootstrap: [AppComponent], 
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
