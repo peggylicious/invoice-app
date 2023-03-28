@@ -39,6 +39,7 @@
     color: var(--primaryText);
     font-size: 12px;
     font-weight: 700;
+    text-decoration: none;
 }
 .page-title{
     margin-left: 0;
@@ -84,4 +85,7 @@ letter-spacing: -0.625px;
 
 color: #FFFFFF;
 margin-bottom: 24px;
+}
+.select-status option{
+    background-color: var(--bgPrimary);
 }

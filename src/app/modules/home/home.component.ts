@@ -16,19 +16,21 @@ export class HomeComponent implements OnInit{
   buttonState = 'delete'
   buttonTitle = 'delete';
   invoices$!: Observable<any>
+  statusArray = ['paid', 'pending']
+  selecteStatus:any;
+  allInvoices$!: Observable<any>
+  allInvoices: Invoice[] = [];
   ngOnInit(): void {
-    // console.log(this.previousUrlService.getPreviousUrl())
     this.inv.getAllInvoiceRemote()
-    this.invoices$ = this.inv.getAllInvoice()
-    // this.inv.getAllInvoice().subscribe({
-    //   next: (result:any)=>{
-    //     this.invoices = result
-    //     console.log(result)
-    //   }, 
-    //   error: (err)=>{
-    //     console.log(err)
-    //   }
-    // })
+    this.inv.getAllInvoice().subscribe({
+      next: (result:any)=>{
+        this.allInvoices = result
+        console.log(result)
+      }, 
+      error: (err)=>{
+        console.log(err)
+      }
+    })
   }
   openInvoice(id:any){
     // this.sharedservice.displayInvoice(id)
@@ -44,6 +46,19 @@ export class HomeComponent implements OnInit{
       
     // })
    
+  }
+  filterByStatus(str:any){
+    console.log(str)
+    let u:any[] =[]
+    let newarr = this.inv.getAllInvoice().subscribe(x=> {
+      u = x
+      if (str){
+        this.allInvoices = u.filter(item=>item.status === str)
+      }else{
+        this.allInvoices = x
+      }
+    })
+    
   }
 //   ngOnDestroy() {
 //     this.previousUrlService.getPreviousUrl()
