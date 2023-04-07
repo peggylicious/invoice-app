@@ -19,6 +19,7 @@
     --invoiceTableFooter: #0C0E16;
     --primaryText: #fff;
     --white: #fff;
+    --whiteBlack: #fff;
     
     /* Text */
     --invoiceNoPrefix: #7E88C3;
@@ -31,6 +32,12 @@
     --cardPadding: 24px 24px 28px 24px;
     --cardBorderRadius: 8px;
     --btnBorderRadius: 6px;
+
+    /* -------------------- */
+    /* **** FONT SIZE ******* */
+    --smallFontMobile: 12px;
+    --mediumFontMobile: 16px;
+    --largeFontMobile: 20px;
 }
 
 .light-root{
@@ -53,6 +60,7 @@
     --invoiceTableFooter: #373B53;
     --primaryText: #0C0E16;
     --white: #fff;
+    --whiteBlack: #000;
     
     /* Text */
     --invoiceNoPrefix: #7E88C3;
