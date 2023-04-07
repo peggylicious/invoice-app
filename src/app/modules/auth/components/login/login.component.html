@@ -1,17 +1,17 @@
 <div class="invoice-form-wrapper">
-    <h1 class="form-title">Login </h1>
+  <h1 class="form-title">Login</h1>
   <form action="" class="invoice-form" [formGroup]="registerForm" (ngSubmit)="login()">
     <div class="sender-wrapper">
-        <h4 class="form-sub-title">Bill From</h4>
       <div class="app-input-wrapper">
         <label for="sender-address">Email</label>
         <input type="email" class="sender-input" name="" id="sender-address" formControlName="email" />
       </div>
-      <div class="app-input-wrapper city" >
+      <div class="app-input-wrapper">
         <label for="">Password</label>
         <input type="password" class="sender-input" name="" id="" formControlName="password" />
       </div>
     </div>
-    <button [disabled]="!registerForm.valid">Login</button>
+    <button [disabled]="!registerForm.valid" class="footer-button">Login</button>
   </form>
+<p style="color: #fff;">Do not have an account? <a [routerLink]="[ '/register' ]">Register</a></p>
 </div>

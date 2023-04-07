@@ -34,7 +34,7 @@
     /* order: 3; */
 }
 .invoice-vendor{
-    color: var(--whiteLight);
+    color: var(--white);
     width: 100%;
     text-align: right;
 }

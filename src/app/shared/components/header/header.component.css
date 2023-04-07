@@ -68,3 +68,12 @@
     background-color: transparent;
     border: none;
 }
+::ng-deep .more-options{
+    border-radius: 8px;
+    background: var(--bgPrimary);
+    box-shadow: 0px 10px 10px -10px rgb(72 84 159 / 10%);
+    color: var(--whiteBlack);
+}
+::ng-deep .more-options mat-icon, ::ng-deep .more-options span{
+    color: var(--whiteBlack) !important;
+}
