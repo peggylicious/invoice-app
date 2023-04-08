@@ -53,7 +53,7 @@ export function tokenGetter() {
           console.log("Abbbbbb")
           return localStorage.getItem("access_token");
         },
-        allowedDomains: ["invoice-api-0.herokuapp.com", "localhost:4315", "localhost:3000"],
+        allowedDomains: ["invoice-api-0.herokuapp.com", "localhost:4315", "localhost:3000", 'invoice-server-187l.onrender.com'],
         disallowedRoutes: ["http://example.com/examplebadroute/"],
       },
     }), 

@@ -17,12 +17,11 @@ export class AuthService {
     // return false;
   }
   registerUser(data:any){
-    // return this.http.post('https://invoice-api-0.herokuapp.com/user/signup', data)
-    
-    return this.http.post('http://localhost:300/user/signup', data) // For local testing purposes
+    return this.http.post('https://invoice-server-187l.onrender.com/user/signup', data)
+    // return this.http.post('http://localhost:300/user/signup', data) // For local testing purposes
   }
   loginUser(data:any){
-    return this.http.post('http://localhost:3000/user/login', data) // For local testing purposes
-    // return this.http.post('https://invoice-api-0.herokuapp.com/user/login', data)
+    // return this.http.post('http://localhost:3000/user/login', data) // For local testing purposes
+    return this.http.post('https://invoice-server-187l.onrender.com/user/login', data)
   }
 }
