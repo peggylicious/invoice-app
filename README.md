@@ -31,3 +31,4 @@ The module titled **others** is a seperate layout for all pages that have a foot
 
 <!-- https://stackoverflow.com/questions/35446955/how-to-go-back-last-page -->
 <!-- https://howtojs.io/how-to-access-previous-route-page-url-in-angular-12/-->
+All deployment on firebase comes from deployment/dev branch -- this is used for testing purposes
