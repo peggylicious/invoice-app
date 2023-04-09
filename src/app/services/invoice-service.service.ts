@@ -6,8 +6,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InvoiceServiceService {
-  // invoiceUrl = "https://invoice-api-0.herokuapp.com/invoice/";
-  invoiceUrl = "http://localhost:3000/invoice/";
+  invoiceUrl = "https://invoice-server-187l.onrender.com/invoice/";
+  // invoiceUrl = "http://localhost:3000/invoice/";
   private invoices$ = new BehaviorSubject<Invoice[]>([]);
 
   constructor(private http: HttpClient) { }
